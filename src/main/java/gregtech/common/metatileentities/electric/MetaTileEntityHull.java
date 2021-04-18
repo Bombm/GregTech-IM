@@ -36,7 +36,7 @@ public class MetaTileEntityHull extends TieredMetaTileEntity {
     @Override
     protected void reinitializeEnergyContainer() {
         long tierVoltage = GTValues.V[getTier()];
-        this.energyContainer = new EnergyContainerHandler(this, tierVoltage * 16L, tierVoltage, 1L, tierVoltage, 1L);
+        this.energyContainer = new EnergyContainerHandler(this, tierVoltage * 16L, tierVoltage, 4L, tierVoltage, 4L);
         ((EnergyContainerHandler) this.energyContainer).setSideOutputCondition(s -> s == getFrontFacing());
     }
 

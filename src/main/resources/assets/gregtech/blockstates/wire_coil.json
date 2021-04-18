@@ -49,6 +49,36 @@
         "textures": {
           "all": "gregtech:blocks/casings/fusion/machine_casing_fusion_coil"
         }
+      },
+      "fluxed_electrum": {
+        "textures": {
+          "all": "gregtech:blocks/casings/coils/machine_fluxed_electrum_coil"
+        }
+      },
+      "enderium": {
+        "textures": {
+          "all": "gregtech:blocks/casings/coils/machine_enderium_coil"
+        }
+      },
+      "osmigermanium": {
+        "textures": {
+          "all": "gregtech:blocks/casings/coils/machine_osmigermanium_coil"
+        }
+      },
+      "stable_island_blend": {
+        "textures": {
+          "all": "gregtech:blocks/casings/coils/machine_stable_island_blend_coil"
+        }
+      },
+      "fusion_coil_2": {
+        "textures": {
+          "all": "gregtech:blocks/casings/fusion/machine_casing_fusion_coil_2"
+        }
+      },
+      "fusion_coil_3": {
+        "textures": {
+          "all": "gregtech:blocks/casings/fusion/machine_casing_fusion_coil_3"
+        }
       }
     }
   }

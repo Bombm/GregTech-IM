@@ -92,7 +92,7 @@ public abstract class TieredMetaTileEntity extends MetaTileEntity implements IEn
     /**
      * Determines if this meta tile entity is in energy receiver or emitter mode
      *
-     * @return true if machine emits energy to network, false it it accepts energy from network
+     * @return true if machine emits energy to network, false if it accepts energy from network
      */
     protected boolean isEnergyEmitter() {
         return false;

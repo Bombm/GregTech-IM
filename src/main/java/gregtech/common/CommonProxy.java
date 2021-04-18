@@ -64,7 +64,11 @@ public class CommonProxy {
         registry.register(BOILER_CASING);
         registry.register(BOILER_FIREBOX_CASING);
         registry.register(METAL_CASING);
+        registry.register(SSP_METAL_CASING);
+        registry.register(SSP_COMP);
+        registry.register(MBCOMP);
         registry.register(TURBINE_CASING);
+        registry.register(SS_MACHINE_CASING);
         registry.register(MACHINE_CASING);
         registry.register(MUTLIBLOCK_CASING);
         registry.register(WIRE_COIL);
@@ -109,7 +113,9 @@ public class CommonProxy {
         registry.register(createItemBlock(BOILER_CASING, VariantItemBlock::new));
         registry.register(createItemBlock(BOILER_FIREBOX_CASING, VariantItemBlock::new));
         registry.register(createItemBlock(METAL_CASING, VariantItemBlock::new));
+        registry.register(createItemBlock(SSP_METAL_CASING, VariantItemBlock::new));
         registry.register(createItemBlock(TURBINE_CASING, VariantItemBlock::new));
+        registry.register(createItemBlock(SS_MACHINE_CASING, VariantItemBlock::new));
         registry.register(createItemBlock(MACHINE_CASING, VariantItemBlock::new));
         registry.register(createItemBlock(MUTLIBLOCK_CASING, VariantItemBlock::new));
         registry.register(createItemBlock(WIRE_COIL, VariantItemBlock::new));
@@ -121,6 +127,9 @@ public class CommonProxy {
         registry.register(createMultiTexItemBlock(LEAVES, state -> state.getValue(BlockGregLeaves.VARIANT).getName()));
         registry.register(createMultiTexItemBlock(SAPLING, state -> state.getValue(BlockGregSapling.VARIANT).getName()));
         registry.register(createItemBlock(CRUSHER_BLADE, ItemBlock::new));
+
+        registry.register(createItemBlock(SSP_COMP, VariantItemBlock::new));
+        registry.register(createItemBlock(MBCOMP, VariantItemBlock::new));
 
         COMPRESSED.values()
             .stream().distinct()

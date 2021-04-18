@@ -61,6 +61,31 @@ public class CoverBehaviors {
         registerBehavior(37, new ResourceLocation(GTValues.MODID, "machine_controller"), MetaItems.COVER_MACHINE_CONTROLLER, CoverMachineController::new);
         registerBehavior(38, new ResourceLocation(GTValues.MODID, "smart_filter"), MetaItems.SMART_FILTER, (tile, side) -> new CoverItemFilter(tile, side, "cover.smart_item_filter.title", Textures.SMART_FILTER_FILTER_OVERLAY, new SmartItemFilter()));
         registerBehavior(39, new ResourceLocation(GTValues.MODID, "facade"), MetaItems.COVER_FACADE, CoverFacade::new);
+
+        registerBehavior(100, new ResourceLocation(GTValues.MODID, "conveyor.uhv"), MetaItems.CONVEYOR_MODULE_UHV, (tile, side) -> new CoverConveyor(tile, side, GTValues.UHV, 32 * 64));
+        registerBehavior(101, new ResourceLocation(GTValues.MODID, "conveyor.uev"), MetaItems.CONVEYOR_MODULE_UEV, (tile, side) -> new CoverConveyor(tile, side, GTValues.UEV, 32 * 64));
+        registerBehavior(102, new ResourceLocation(GTValues.MODID, "conveyor.uiv"), MetaItems.CONVEYOR_MODULE_UIV, (tile, side) -> new CoverConveyor(tile, side, GTValues.UIV, 32 * 64));
+        registerBehavior(103, new ResourceLocation(GTValues.MODID, "conveyor.umv"), MetaItems.CONVEYOR_MODULE_UMV, (tile, side) -> new CoverConveyor(tile, side, GTValues.UMV, 32 * 64));
+        registerBehavior(104, new ResourceLocation(GTValues.MODID, "conveyor.uxv"), MetaItems.CONVEYOR_MODULE_UXV, (tile, side) -> new CoverConveyor(tile, side, GTValues.UXV, 64 * 64));
+        registerBehavior(105, new ResourceLocation(GTValues.MODID, "conveyor.opv"), MetaItems.CONVEYOR_MODULE_OPV, (tile, side) -> new CoverConveyor(tile, side, GTValues.OpV, 64 * 64));
+
+
+        registerBehavior(106, new ResourceLocation(GTValues.MODID, "robotic_arm.uhv"), MetaItems.ROBOT_ARM_UHV, (tile, side) -> new CoverRoboticArm(tile, side, GTValues.UHV, 32 * 64));
+        registerBehavior(107, new ResourceLocation(GTValues.MODID, "robotic_arm.uev"), MetaItems.ROBOT_ARM_UEV, (tile, side) -> new CoverRoboticArm(tile, side, GTValues.UEV, 32 * 64));
+        registerBehavior(108, new ResourceLocation(GTValues.MODID, "robotic_arm.uiv"), MetaItems.ROBOT_ARM_UIV, (tile, side) -> new CoverRoboticArm(tile, side, GTValues.UIV, 32 * 64));
+        registerBehavior(109, new ResourceLocation(GTValues.MODID, "robotic_arm.umv"), MetaItems.ROBOT_ARM_UMV, (tile, side) -> new CoverRoboticArm(tile, side, GTValues.UMV, 32 * 64));
+        registerBehavior(110, new ResourceLocation(GTValues.MODID, "robotic_arm.uxv"), MetaItems.ROBOT_ARM_UXV, (tile, side) -> new CoverRoboticArm(tile, side, GTValues.UXV, 64 * 64));
+        registerBehavior(111, new ResourceLocation(GTValues.MODID, "robotic_arm.opv"), MetaItems.ROBOT_ARM_OPV, (tile, side) -> new CoverRoboticArm(tile, side, GTValues.OpV, 64 * 64));
+
+
+        registerBehavior(112, new ResourceLocation(GTValues.MODID, "pump.uhv"), MetaItems.ELECTRIC_PUMP_UHV, (tile, side) -> new CoverPump(tile, side, GTValues.UHV,80000000));
+        registerBehavior(113, new ResourceLocation(GTValues.MODID, "pump.uev"), MetaItems.ELECTRIC_PUMP_UEV, (tile, side) -> new CoverPump(tile, side, GTValues.UEV,32000000));
+        registerBehavior(114, new ResourceLocation(GTValues.MODID, "pump.uiv"), MetaItems.ELECTRIC_PUMP_UIV, (tile, side) -> new CoverPump(tile, side, GTValues.UIV,128000000));
+        registerBehavior(115, new ResourceLocation(GTValues.MODID, "pump.umv"), MetaItems.ELECTRIC_PUMP_UMV, (tile, side) -> new CoverPump(tile, side, GTValues.UMV,512000000));
+        registerBehavior(116, new ResourceLocation(GTValues.MODID, "pump.uxv"), MetaItems.ELECTRIC_PUMP_UXV, (tile, side) -> new CoverPump(tile, side, GTValues.UXV, 1024000000));
+        registerBehavior(117, new ResourceLocation(GTValues.MODID, "pump.opv"), MetaItems.ELECTRIC_PUMP_OPV, (tile, side) -> new CoverPump(tile, side, GTValues.OpV, Integer.MAX_VALUE));
+
+
     }
 
     public static void registerBehavior(int coverNetworkId, ResourceLocation coverId, MetaValueItem placerItem, BiFunction<ICoverable, EnumFacing, CoverBehavior> behaviorCreator) {

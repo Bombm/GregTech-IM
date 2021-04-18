@@ -1,0 +1,7 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer1": "gregtech:items/metaitems/component.gemsaw.bcarb",
+    "layer0": "gregtech:items/metaitems/component.sawblade.diamond"
+  }
+}

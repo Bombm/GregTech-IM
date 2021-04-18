@@ -139,7 +139,29 @@ public enum Element {
     //stargate
     Tr(119, 178, -1, null, "Tritanium", false),
     Dr(120, 180, -1, null, "Duranium", false),
-    Nq(121, 172, 140, null, "Naquadah", true);
+    Nq(121, 172, 140, null, "Naquadah", true),
+    Nr(125, 164, -1, null, "Naquadria", true),
+    Ke(143, 267, -1, null, "Trinium", false),
+    //ssp
+    Uue(119, 197, -1, null, "ununennium", false),
+    Ubn(120,182,-1,null,"unbinilium",false),
+    Ubu(121, 199, -1,null,"unbiunium", false),
+    Ubb(122, 183, -1,null,"unbibium", false),
+    Ubt(123, 185, -1,null,"unbitrium", false),
+    Ubq(124, 190, -1,null,"unbiquadium", false),
+    Ubp(125,190,-1,null,"unbipentium", false),
+    Ubh(126,190,-1,null,"unbihexium", false),
+    Ubs(127,200,-1,null,"unbiseptium",false),
+
+    Uue_stable(119, 198, -1, null, "ununennium+", false),
+    Ubn_stable(120,183,-1,null,"unbinilium+",true),
+    Ubu_stable(121, 200, -1,null,"unbiunium+", true),
+    Ubb_stable(122, 184, -1,null,"unbibium+", true),
+    Ubt_stable(123, 186, -1,null,"unbitrium+", true),
+    Ubq_stable(124, 191, -1,null,"unbiquadium+", true),
+    Ubp_stable(125,191,-1,null,"unbipentium+", true),
+    Ubh_stable(126,191,-1,null,"unbihexium+", true),
+    Ubs_stable(127,201,-1,null,"unbiseptium+",true);
 
     public final String name;
     public final long protons;

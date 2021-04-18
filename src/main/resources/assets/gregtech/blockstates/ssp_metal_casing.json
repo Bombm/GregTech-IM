@@ -1,0 +1,66 @@
+{
+  "forge_marker": 1,
+  "defaults": {
+    "model": "minecraft:cube_all"
+  },
+  "variants": {
+    "variant": {
+      "data": {
+        "textures": {
+          "all": "gregtech:blocks/casings/solid/machine_casing_data"
+        }
+      },
+      "fieldgen": {
+        "textures": {
+          "all": "gregtech:blocks/casings/solid/machine_casing_fieldgen"
+        }
+      },
+      "extreme": {
+        "textures": {
+          "all": "gregtech:blocks/casings/solid/machine_casing_extreme"
+        }
+      },
+      "bacterial_reflective": {
+        "textures": {
+          "all": "gregtech:blocks/casings/solid/machine_casing_bacterial_reflective"
+        }
+      },
+      "bacterial_reflective_glass": {
+        "textures": {
+          "all": "gregtech:blocks/casings/solid/machine_casing_bacterial_reflective_glass"
+        }
+      },
+      "chemically_inert": {
+        "textures": {
+          "all": "gregtech:blocks/casings/solid/machine_casing_chemically_inert"
+        }
+      },
+      "heater_block": {
+        "textures": {
+          "all": "gregtech:blocks/casings/solid/machine_casing_heater_block"
+        }
+      },
+      "solid_tempered_hss_e_casing": {
+        "textures": {
+          "all": "gregtech:blocks/casings/solid/machine_casing_solid_tempered_hss_e_casing"
+        }
+      },
+      "solid_hss_g_casing": {
+        "textures": {
+          "all": "gregtech:blocks/casings/solid/machine_casing_solid_hss_g_casing"
+        }
+      },
+      "plasma_injector": {
+        "textures": {
+          "all": "gregtech:blocks/casings/solid/machine_casing_plasma_injector"
+        }
+      },
+      "fusion_3": {
+        "textures": {
+          "all": "gregtech:blocks/casings/solid/machine_casing_fusion_3"
+        }
+      }
+	  
+    }
+  }
+}

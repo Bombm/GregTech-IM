@@ -137,6 +137,12 @@ public final class MetaItems {
 
     public static MetaItem<?>.MetaValueItem ENERGY_LAPOTRONIC_ORB;
     public static MetaItem<?>.MetaValueItem ENERGY_LAPOTRONIC_ORB2;
+    public static MetaItem<?>.MetaValueItem ENERGY_LAPOTRONIC_SSP_ORB_3;
+    public static MetaItem<?>.MetaValueItem ENERGY_LAPOTRONIC_SSP_ORB_4;
+    public static MetaItem<?>.MetaValueItem ENERGY_LAPOTRONIC_SSP_ORB_5;
+    public static MetaItem<?>.MetaValueItem ENERGY_LAPOTRONIC_SSP_ORB_6;
+    public static MetaItem<?>.MetaValueItem ENERGY_LAPOTRONIC_SSP_ORB_7;
+    public static MetaItem<?>.MetaValueItem ENERGY_LAPOTRONIC_SSP_ORB_8;
     public static MetaItem<?>.MetaValueItem ZPM;
     public static MetaItem<?>.MetaValueItem ZPM2;
 
@@ -148,6 +154,12 @@ public final class MetaItems {
     public static MetaItem<?>.MetaValueItem ELECTRIC_MOTOR_LUV;
     public static MetaItem<?>.MetaValueItem ELECTRIC_MOTOR_ZPM;
     public static MetaItem<?>.MetaValueItem ELECTRIC_MOTOR_UV;
+    public static MetaItem<?>.MetaValueItem ELECTRIC_MOTOR_UHV;
+    public static MetaItem<?>.MetaValueItem ELECTRIC_MOTOR_UEV;
+    public static MetaItem<?>.MetaValueItem ELECTRIC_MOTOR_UIV;
+    public static MetaItem<?>.MetaValueItem ELECTRIC_MOTOR_UMV;
+    public static MetaItem<?>.MetaValueItem ELECTRIC_MOTOR_UXV;
+    public static MetaItem<?>.MetaValueItem ELECTRIC_MOTOR_OPV;
 
     public static MetaItem<?>.MetaValueItem ELECTRIC_PUMP_LV;
     public static MetaItem<?>.MetaValueItem ELECTRIC_PUMP_MV;
@@ -157,6 +169,12 @@ public final class MetaItems {
     public static MetaItem<?>.MetaValueItem ELECTRIC_PUMP_LUV;
     public static MetaItem<?>.MetaValueItem ELECTRIC_PUMP_ZPM;
     public static MetaItem<?>.MetaValueItem ELECTRIC_PUMP_UV;
+    public static MetaItem<?>.MetaValueItem ELECTRIC_PUMP_UHV;
+    public static MetaItem<?>.MetaValueItem ELECTRIC_PUMP_UEV;
+    public static MetaItem<?>.MetaValueItem ELECTRIC_PUMP_UIV;
+    public static MetaItem<?>.MetaValueItem ELECTRIC_PUMP_UMV;
+    public static MetaItem<?>.MetaValueItem ELECTRIC_PUMP_UXV;
+    public static MetaItem<?>.MetaValueItem ELECTRIC_PUMP_OPV;
 
     public static MetaItem<?>.MetaValueItem FLUID_FILTER;
 
@@ -170,6 +188,34 @@ public final class MetaItems {
     public static MetaItem<?>.MetaValueItem CONVEYOR_MODULE_LUV;
     public static MetaItem<?>.MetaValueItem CONVEYOR_MODULE_ZPM;
     public static MetaItem<?>.MetaValueItem CONVEYOR_MODULE_UV;
+    public static MetaItem<?>.MetaValueItem CONVEYOR_MODULE_UHV;
+    public static MetaItem<?>.MetaValueItem CONVEYOR_MODULE_UEV;
+    public static MetaItem<?>.MetaValueItem CONVEYOR_MODULE_UIV;
+    public static MetaItem<?>.MetaValueItem CONVEYOR_MODULE_UMV;
+    public static MetaItem<?>.MetaValueItem CONVEYOR_MODULE_UXV;
+    public static MetaItem<?>.MetaValueItem CONVEYOR_MODULE_OPV;
+
+    public static MetaItem<?>.MetaValueItem BATTERY_HULL_EV;
+    public static MetaItem<?>.MetaValueItem BATTERY_HULL_IV;
+    public static MetaItem<?>.MetaValueItem BATTERY_HULL_LUV;
+    public static MetaItem<?>.MetaValueItem BATTERY_HULL_ZPM;
+    public static MetaItem<?>.MetaValueItem BATTERY_HULL_UV;
+    public static MetaItem<?>.MetaValueItem BATTERY_HULL_UHV;
+    public static MetaItem<?>.MetaValueItem BATTERY_HULL_UEV;
+    public static MetaItem<?>.MetaValueItem BATTERY_HULL_UIV;
+    public static MetaItem<?>.MetaValueItem BATTERY_HULL_UMV;
+    public static MetaItem<?>.MetaValueItem BATTERY_HULL_UXV;
+    public static MetaItem<?>.MetaValueItem BATTERY_HULL_OPV;
+
+    public static MetaItem<?>.MetaValueItem BATTERY_RE_EV;
+    public static MetaItem<?>.MetaValueItem BATTERY_RE_IV;
+    public static MetaItem<?>.MetaValueItem BATTERY_RE_LUV;
+    public static MetaItem<?>.MetaValueItem BATTERY_RE_ZPM;
+    public static MetaItem<?>.MetaValueItem BATTERY_RE_UV;
+    public static MetaItem<?>.MetaValueItem BATTERY_RE_UHV;
+    public static MetaItem<?>.MetaValueItem BATTERY_RE_UEV;
+    public static MetaItem<?>.MetaValueItem BATTERY_RE_UIV;
+
 
     public static MetaItem<?>.MetaValueItem ELECTRIC_PISTON_LV;
     public static MetaItem<?>.MetaValueItem ELECTRIC_PISTON_MV;
@@ -179,6 +225,12 @@ public final class MetaItems {
     public static MetaItem<?>.MetaValueItem ELECTRIC_PISTON_LUV;
     public static MetaItem<?>.MetaValueItem ELECTRIC_PISTON_ZPM;
     public static MetaItem<?>.MetaValueItem ELECTRIC_PISTON_UV;
+    public static MetaItem<?>.MetaValueItem ELECTRIC_PISTON_UHV;
+    public static MetaItem<?>.MetaValueItem ELECTRIC_PISTON_UEV;
+    public static MetaItem<?>.MetaValueItem ELECTRIC_PISTON_UIV;
+    public static MetaItem<?>.MetaValueItem ELECTRIC_PISTON_UMV;
+    public static MetaItem<?>.MetaValueItem ELECTRIC_PISTON_UXV;
+    public static MetaItem<?>.MetaValueItem ELECTRIC_PISTON_OPV;
 
     public static MetaItem<?>.MetaValueItem ROBOT_ARM_LV;
     public static MetaItem<?>.MetaValueItem ROBOT_ARM_MV;
@@ -188,6 +240,12 @@ public final class MetaItems {
     public static MetaItem<?>.MetaValueItem ROBOT_ARM_LUV;
     public static MetaItem<?>.MetaValueItem ROBOT_ARM_ZPM;
     public static MetaItem<?>.MetaValueItem ROBOT_ARM_UV;
+    public static MetaItem<?>.MetaValueItem ROBOT_ARM_UHV;
+    public static MetaItem<?>.MetaValueItem ROBOT_ARM_UEV;
+    public static MetaItem<?>.MetaValueItem ROBOT_ARM_UIV;
+    public static MetaItem<?>.MetaValueItem ROBOT_ARM_UMV;
+    public static MetaItem<?>.MetaValueItem ROBOT_ARM_UXV;
+    public static MetaItem<?>.MetaValueItem ROBOT_ARM_OPV;
 
     public static MetaItem<?>.MetaValueItem FIELD_GENERATOR_LV;
     public static MetaItem<?>.MetaValueItem FIELD_GENERATOR_MV;
@@ -197,6 +255,12 @@ public final class MetaItems {
     public static MetaItem<?>.MetaValueItem FIELD_GENERATOR_LUV;
     public static MetaItem<?>.MetaValueItem FIELD_GENERATOR_ZPM;
     public static MetaItem<?>.MetaValueItem FIELD_GENERATOR_UV;
+    public static MetaItem<?>.MetaValueItem FIELD_GENERATOR_UHV;
+    public static MetaItem<?>.MetaValueItem FIELD_GENERATOR_UEV;
+    public static MetaItem<?>.MetaValueItem FIELD_GENERATOR_UIV;
+    public static MetaItem<?>.MetaValueItem FIELD_GENERATOR_UMV;
+    public static MetaItem<?>.MetaValueItem FIELD_GENERATOR_UXV;
+    public static MetaItem<?>.MetaValueItem FIELD_GENERATOR_OPV;
 
     public static MetaItem<?>.MetaValueItem EMITTER_LV;
     public static MetaItem<?>.MetaValueItem EMITTER_MV;
@@ -206,6 +270,12 @@ public final class MetaItems {
     public static MetaItem<?>.MetaValueItem EMITTER_LUV;
     public static MetaItem<?>.MetaValueItem EMITTER_ZPM;
     public static MetaItem<?>.MetaValueItem EMITTER_UV;
+    public static MetaItem<?>.MetaValueItem EMITTER_UHV;
+    public static MetaItem<?>.MetaValueItem EMITTER_UEV;
+    public static MetaItem<?>.MetaValueItem EMITTER_UIV;
+    public static MetaItem<?>.MetaValueItem EMITTER_UMV;
+    public static MetaItem<?>.MetaValueItem EMITTER_UXV;
+    public static MetaItem<?>.MetaValueItem EMITTER_OPV;
 
     public static MetaItem<?>.MetaValueItem SENSOR_LV;
     public static MetaItem<?>.MetaValueItem SENSOR_MV;
@@ -215,8 +285,23 @@ public final class MetaItems {
     public static MetaItem<?>.MetaValueItem SENSOR_LUV;
     public static MetaItem<?>.MetaValueItem SENSOR_ZPM;
     public static MetaItem<?>.MetaValueItem SENSOR_UV;
+    public static MetaItem<?>.MetaValueItem SENSOR_UHV;
+    public static MetaItem<?>.MetaValueItem SENSOR_UEV;
+    public static MetaItem<?>.MetaValueItem SENSOR_UIV;
+    public static MetaItem<?>.MetaValueItem SENSOR_UMV;
+    public static MetaItem<?>.MetaValueItem SENSOR_UXV;
+    public static MetaItem<?>.MetaValueItem SENSOR_OPV;
 
     public static MetaItem<?>.MetaValueItem TOOL_DATA_STICK;
+    public static MetaItem<?>.MetaValueItem TOOL_DATA_STICK_LUV;
+    public static MetaItem<?>.MetaValueItem TOOL_DATA_STICK_ZPM;
+    public static MetaItem<?>.MetaValueItem TOOL_DATA_STICK_UV;
+    public static MetaItem<?>.MetaValueItem TOOL_DATA_STICK_UHV;
+    public static MetaItem<?>.MetaValueItem TOOL_DATA_STICK_UEV;
+    public static MetaItem<?>.MetaValueItem TOOL_DATA_STICK_UIV;
+    public static MetaItem<?>.MetaValueItem TOOL_DATA_STICK_UMV;
+    public static MetaItem<?>.MetaValueItem TOOL_DATA_STICK_UXV;
+    public static MetaItem<?>.MetaValueItem TOOL_DATA_STICK_OPV;
     public static MetaItem<?>.MetaValueItem TOOL_DATA_ORB;
 
     public static MetaItem<?>.MetaValueItem GLOWSTONE_BOULE;
@@ -349,6 +434,70 @@ public final class MetaItems {
 
     public static MetaItem<?>.MetaValueItem TURBINE_ROTOR;
 
+    public static MetaItem<?>.MetaValueItem ENERGY_FLOW_MAINFRAME;
+    public static MetaItem<?>.MetaValueItem ENERGY_FLOW_SUPERCOMPUTER;
+    public static MetaItem<?>.MetaValueItem NANO_MAINFRAME;
+    public static MetaItem<?>.MetaValueItem NANO_SUPERCOMPUTER;
+    public static MetaItem<?>.MetaValueItem QUANTUM_MAINFRAME;
+    public static MetaItem<?>.MetaValueItem QUANTUM_SUPERCOMPUTER;
+    public static MetaItem<?>.MetaValueItem BIOWARE;
+    public static MetaItem<?>.MetaValueItem BIOWARE_ASSEMBLY;
+    public static MetaItem<?>.MetaValueItem BIOWARE_MAINFRAME;
+    public static MetaItem<?>.MetaValueItem BIOWARE_SUPERCOMPUTER;
+    public static MetaItem<?>.MetaValueItem HIGH_ENERGY;
+    public static MetaItem<?>.MetaValueItem HIGH_ENERGY_FLOW;
+    public static MetaItem<?>.MetaValueItem HIGH_ENERGY_MAINFRAME;
+    public static MetaItem<?>.MetaValueItem HIGH_ENERGY_SUPERCOMPUTER;
+    public static MetaItem<?>.MetaValueItem MICRO;
+    public static MetaItem<?>.MetaValueItem MICRO_ASSEMBLY;
+    public static MetaItem<?>.MetaValueItem MICRO_MAINFRAME;
+    public static MetaItem<?>.MetaValueItem MICRO_SUPERCOMPUTER;
+    public static MetaItem<?>.MetaValueItem QUANTUM_MK2;
+    public static MetaItem<?>.MetaValueItem QUANTUM_MK2_ASSEMBLY;
+    public static MetaItem<?>.MetaValueItem QUANTUM_MK2_MAINFRAME;
+    public static MetaItem<?>.MetaValueItem QUANTUM_MK2_SUPERCOMPUTER;
+
+    public static MetaItem<?>.MetaValueItem HIGH_ENERGY_BOARD;
+    public static MetaItem<?>.MetaValueItem BIO_BOARD;
+    public static MetaItem<?>.MetaValueItem QUANTUM_MK2_BOARD;
+    public static MetaItem<?>.MetaValueItem MICRO_BOARD;
+
+    public static MetaItem<?>.MetaValueItem BIOCELLS;
+    public static MetaItem<?>.MetaValueItem PLASMID_CELL;
+
+    public static MetaItem<?>.MetaValueItem AMERICIUM_BOULE;
+    public static MetaItem<?>.MetaValueItem EUROPIUM_BOULE;
+    public static MetaItem<?>.MetaValueItem GERMANIUM_BOULE;
+
+    public static MetaItem<?>.MetaValueItem QPIC_WAFER;
+    public static MetaItem<?>.MetaValueItem NPIC_WAFER;
+    public static MetaItem<?>.MetaValueItem UHPIC_WAFER;
+    public static MetaItem<?>.MetaValueItem XORG_WAFER;
+    public static MetaItem<?>.MetaValueItem AMERICIUM_WAFER;
+    public static MetaItem<?>.MetaValueItem EUROPIUM_WAFER;
+    public static MetaItem<?>.MetaValueItem GERMANIUM_WAFER;
+
+    public static MetaItem<?>.MetaValueItem ASOC_SSP_WAFER;
+    public static MetaItem<?>.MetaValueItem CPU_SSP_WAFER;
+    public static MetaItem<?>.MetaValueItem ILC_SSP_WAFER;
+    public static MetaItem<?>.MetaValueItem QBIT_SSP_WAFER;
+    public static MetaItem<?>.MetaValueItem RAM_SSP_WAFER;
+    public static MetaItem<?>.MetaValueItem SOC_SSP_WAFER;
+
+    public static MetaItem<?>.MetaValueItem NANO_POWER_IC;
+    public static MetaItem<?>.MetaValueItem QUANTUM_POWER_IC;
+    public static MetaItem<?>.MetaValueItem ASOC_SSP_PLATE;
+    public static MetaItem<?>.MetaValueItem CPU_SSP_PLATE;
+    public static MetaItem<?>.MetaValueItem ILC_SSP_PLATE;
+    public static MetaItem<?>.MetaValueItem QBIT_SSP_PLATE;
+    public static MetaItem<?>.MetaValueItem RAM_SSP_PLATE;
+    public static MetaItem<?>.MetaValueItem SOC_SSP_PLATE;
+    public static MetaItem<?>.MetaValueItem UHPIC_PLATE;
+    public static MetaItem<?>.MetaValueItem XORG_PLATE;
+
+    public static MetaItem<?>.MetaValueItem COMPONENT_SAW_BLADE_MGCUB;
+    public static MetaItem<?>.MetaValueItem COMPONENT_SAW_BLADE_BCUB;
+
     public static ArmorMetaItem.ArmorMetaValueItem REBREATHER;
 
     public static ToolMetaItem<?>.MetaToolValueItem SWORD;
@@ -390,6 +539,7 @@ public final class MetaItems {
         first.setRegistryName("meta_item_1");
         MetaItem2 second = new MetaItem2();
         second.setRegistryName("meta_item_2");
+
         MetaTool tool = new MetaTool();
         tool.setRegistryName("meta_tool");
         MetaArmor armor = new MetaArmor();

@@ -49,6 +49,36 @@
         "textures": {
           "all": "gregtech:blocks/casings/solid/machine_casing_robust_tungstensteel"
         }
+      },
+      "inconel_600_solid": {
+        "textures": {
+          "all": "gregtech:blocks/casings/solid/machine_casing_inconel_600"
+        }
+      },
+      "inconel_x750_solid": {
+        "textures": {
+          "all": "gregtech:blocks/casings/solid/machine_casing_inconel_x750"
+        }
+      },
+      "inconel_ma758_solid": {
+        "textures": {
+          "all": "gregtech:blocks/casings/solid/machine_casing_inconel_ma758"
+        }
+      },
+      "hastelloy_n_solid": {
+        "textures": {
+          "all": "gregtech:blocks/casings/solid/machine_casing_hastelloy_n"
+        }
+      },
+      "hastelloy_x78_solid": {
+        "textures": {
+          "all": "gregtech:blocks/casings/solid/machine_casing_hastelloy_x78"
+        }
+      },
+      "hastelloy_k243_solid": {
+        "textures": {
+          "all": "gregtech:blocks/casings/solid/machine_casing_hastelloy_k243"
+        }
       }
     }
   }

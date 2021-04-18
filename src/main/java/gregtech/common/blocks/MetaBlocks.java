@@ -85,7 +85,12 @@ public class MetaBlocks {
     public static BlockBoilerCasing BOILER_CASING;
     public static BlockFireboxCasing BOILER_FIREBOX_CASING;
     public static BlockMetalCasing METAL_CASING;
+    public static BlockSSPMetalCasing SSP_METAL_CASING;
     public static BlockTurbineCasing TURBINE_CASING;
+    public static BlockSolarCasing SSP_SOLAR_CASING;
+    public static BlockSSMachineCasing SS_MACHINE_CASING;
+    public static BlockSSPComp SSP_COMP;
+    public static BlockMulitBlockComp MBCOMP;
     public static BlockMachineCasing MACHINE_CASING;
     public static BlockMultiblockCasing MUTLIBLOCK_CASING;
     public static BlockWireCoil WIRE_COIL;
@@ -128,6 +133,17 @@ public class MetaBlocks {
         METAL_CASING.setRegistryName("metal_casing");
         TURBINE_CASING = new BlockTurbineCasing();
         TURBINE_CASING.setRegistryName("turbine_casing");
+        SS_MACHINE_CASING = new BlockSSMachineCasing();
+        SS_MACHINE_CASING.setRegistryName("ss_machine_casing");
+        SSP_METAL_CASING = new BlockSSPMetalCasing();
+        SSP_METAL_CASING.setRegistryName("ssp_metal_casing");
+        SSP_COMP = new BlockSSPComp();
+        SSP_COMP.setRegistryName("ssp_comp");
+        MBCOMP = new BlockMulitBlockComp();
+        MBCOMP.setRegistryName("computer_block");
+        SSP_SOLAR_CASING = new BlockSolarCasing();
+        SSP_SOLAR_CASING.setRegistryName("ssp_solar_casing");
+
         MACHINE_CASING = new BlockMachineCasing();
         MACHINE_CASING.setRegistryName("machine_casing");
         MUTLIBLOCK_CASING = new BlockMultiblockCasing();
@@ -291,9 +307,14 @@ public class MetaBlocks {
         registerItemModel(BOILER_FIREBOX_CASING);
         registerItemModel(METAL_CASING);
         registerItemModel(TURBINE_CASING);
+        registerItemModel(SS_MACHINE_CASING);
+        registerItemModel(SSP_METAL_CASING);
+        registerItemModel(SSP_COMP);
+        registerItemModel(MBCOMP);
         registerItemModel(MACHINE_CASING);
         registerItemModel(MUTLIBLOCK_CASING);
         registerItemModel(WIRE_COIL);
+        registerItemModel(SSP_SOLAR_CASING);
         registerItemModel(WARNING_SIGN);
         registerItemModel(GRANITE);
         registerItemModel(MINERAL);

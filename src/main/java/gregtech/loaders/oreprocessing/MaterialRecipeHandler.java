@@ -39,7 +39,9 @@ public class MaterialRecipeHandler {
 
         OrePrefix.dust.addProcessingHandler(DustMaterial.class, MaterialRecipeHandler::processDust);
         OrePrefix.dustSmall.addProcessingHandler(DustMaterial.class, MaterialRecipeHandler::processSmallDust);
-        OrePrefix.dustTiny.addProcessingHandler(DustMaterial.class, MaterialRecipeHandler::processTinyDust);
+        OrePrefix.dustTiny.addProcessingHandler(GemMaterial.class, MaterialRecipeHandler::processTinyDust);
+
+        OrePrefix.gemExquisite.addProcessingHandler(GemMaterial.class, MaterialRecipeHandler::processGemCut);
 
         for (OrePrefix orePrefix : GEM_ORDER) {
             orePrefix.addProcessingHandler(GemMaterial.class, MaterialRecipeHandler::processGem);
@@ -295,6 +297,15 @@ public class MaterialRecipeHandler {
                 .duration(20).EUt(16)
                 .buildAndRegister();
         }
+    }
+
+    public static void processGemCut(OrePrefix gemPrefix, GemMaterial material){
+            ItemStack exGem = OreDictUnifier.get(gemPrefix, material);
+            RecipeMaps.GEM_CUTTER.recipeBuilder()
+                .input(OrePrefix.block, material)
+                .outputs(exGem, GTUtility.copyAmount(2, OreDictUnifier.get(OrePrefix.dust, material)))
+                .duration(800).EUt(512)
+                .buildAndRegister();
     }
 
     public static void processNugget(OrePrefix orePrefix, SolidMaterial material) {

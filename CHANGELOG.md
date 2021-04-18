@@ -115,6 +115,9 @@
 * Fixed wrong translation of Rubber nuget in ZH (#1327) - Pierre Zhang
 * Fixed Multiblocks voiding partial recipe outputs when output bus is mostly full (#1337) - ALongStringOfNumbers
 
+### 1.10.7
+
+
 ### 1.10.7 (Hotfix)
 * Fixed Brewery and Forming Press recipe finder not working properly - LAGIdiot
 * Fixed Fluid Canner and Electric Furnace recipe finder not working properly (#1326) - ALongStringOfNumbers

@@ -8,5 +8,6 @@ public class MetaArmor extends ArmorMetaItem<ArmorMetaItem<?>.ArmorMetaValueItem
     @Override
     public void registerSubItems() {
         MetaItems.REBREATHER = addItem(0, "rebreather").setArmorLogic(new ArmorLogicRebreather(16));
+
     }
 }

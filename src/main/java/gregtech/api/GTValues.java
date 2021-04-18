@@ -39,7 +39,7 @@ public class GTValues {
     /**
      * The Voltage Tiers. Use this Array instead of the old named Voltage Variables
      */
-    public static final long[] V = new long[]{8, 32, 128, 512, 2048, 8192, 32768, 131072, 524288, Integer.MAX_VALUE};
+    public static final long[] V = new long[]{8, 32, 128, 512, 2048, 8192, 32768, 131072, 524288, 2097152, 8388608, 33554432, 134217728, 536870912, 1073741824, Integer.MAX_VALUE};
 
     public static final int ULV = 0;
     public static final int LV = 1;
@@ -50,22 +50,28 @@ public class GTValues {
     public static final int LuV = 6;
     public static final int ZPM = 7;
     public static final int UV = 8;
-    public static final int MAX = 9;
+    public static final int UHV = 9;
+    public static final int UEV = 10;
+    public static final int UIV = 11;
+    public static final int UMV = 12;
+    public static final int UXV = 13;
+    public static final int OpV = 14;
+    public static final int MAX = 15;
 
     /**
      * The short names for the voltages
      */
-    public static final String[] VN = new String[] {"ULV", "LV", "MV", "HV", "EV", "IV", "LuV", "ZPM", "UV", "MAX"};
+    public static final String[] VN = new String[] {"ULV", "LV", "MV", "HV", "EV", "IV", "LuV", "ZPM", "UV", "UHV","UEV","UIV","UMV","UXV","OpV", "MAX"};
 
     /**
      * Color values for the voltages
      */
-    public static final int[] VC = new int[] {0xDCDCDC, 0xDCDCDC, 0xFF6400, 0xFFFF1E, 0x808080, 0xF0F0F5, 0xF0F0F5, 0xF0F0F5, 0xF0F0F5, 0xF0F0F5};
+    public static final int[] VC = new int[] {0xDCDCDC, 0xDCDCDC, 0xFF6400, 0xFFFF1E, 0x808080, 0xF0F0F5, 0xF0F0F5, 0xF0F0F5, 0xF0F0F5,0xE3256B,0xBD1955,0xE856E8,0xDF73FF,0xBDE0FF,0x2499FF, 0xF0F0F5};
 
     /**
      * The long names for the voltages
      */
-    public static final String[] VOLTAGE_NAMES = new String[] {"Ultra Low Voltage", "Low Voltage", "Medium Voltage", "High Voltage", "Extreme Voltage", "Insane Voltage", "Ludicrous Voltage", "ZPM Voltage", "Ultimate Voltage", "Maximum Voltage"};
+    public static final String[] VOLTAGE_NAMES = new String[] {"Ultra Low Voltage", "Low Voltage", "Medium Voltage", "High Voltage", "Extreme Voltage", "Insane Voltage", "Ludicrous Voltage", "ZPM Voltage", "Ultimate Voltage", "Ultra High Voltage", "Ultra Extreme Voltage", "Ultra Insane Coltage", "Ultra Mad Voltage", "Ultra X Voltage", "Overpowered Voltage", "Maximum Voltage"};
 
     /**
      * ModID strings, since they are quite common parameters

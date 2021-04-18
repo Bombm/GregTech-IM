@@ -165,6 +165,78 @@ public class MetaItem2 extends MaterialMetaItem {
 
         TURBINE_ROTOR = addItem(508, "turbine_rotor").addComponents(new TurbineRotorBehavior());
         COVER_FACADE = addItem(509, "cover.facade").addComponents(new FacadeItem()).disableModelLoading();
+
+        //ssp
+        ENERGY_FLOW_MAINFRAME = addItem(610, "circuit.energy_flow_mainframe");
+        ENERGY_FLOW_SUPERCOMPUTER = addItem(611, "circuit.energy_flow_supercomputer");
+
+        NANO_MAINFRAME = addItem(612, "circuit.nano_mainframe");
+        NANO_SUPERCOMPUTER = addItem(613, "circuit.nano_supercomputer");
+
+        QUANTUM_MAINFRAME = addItem(614, "circuit.quantum_mainframe");
+        QUANTUM_SUPERCOMPUTER = addItem(615, "circuit.quantum_supercomputer");
+
+        BIOWARE = addItem(616, "circuit.bioware");
+        BIOWARE_ASSEMBLY = addItem(617, "circuit.bioware_assembly");
+        BIOWARE_MAINFRAME = addItem(618, "circuit.bioware_mainframe");
+        BIOWARE_SUPERCOMPUTER = addItem(619, "circuit.bioware_supercomputer");
+
+        HIGH_ENERGY = addItem(620, "circuit.high_energy");
+        HIGH_ENERGY_FLOW = addItem(621, "circuit.high_energy_flow");
+        HIGH_ENERGY_MAINFRAME = addItem(622, "circuit.high_energy_mainframe");
+        HIGH_ENERGY_SUPERCOMPUTER = addItem(623, "circuit.high_energy_supercomputer");
+
+        MICRO = addItem(624, "circuit.micro");
+        MICRO_ASSEMBLY = addItem(625, "circuit.micro_assembly");
+        MICRO_MAINFRAME = addItem(626, "circuit.micro_mainframe");
+        MICRO_SUPERCOMPUTER = addItem(627, "circuit.micro_supercomputer");
+
+        QUANTUM_MK2 = addItem(628, "circuit.quantum_mk2");
+        QUANTUM_MK2_ASSEMBLY = addItem(629, "circuit.quantum_mk2_assembly");
+        QUANTUM_MK2_MAINFRAME = addItem(630, "circuit.quantum_mk2_mainframe");
+        QUANTUM_MK2_SUPERCOMPUTER = addItem(631, "circuit.quantum_mk2_supercomputer");
+
+        BIO_BOARD  = addItem(632, "board.bio");
+        HIGH_ENERGY_BOARD  = addItem(633, "board.high_energy");
+        MICRO_BOARD  = addItem(634, "board.micro");
+        QUANTUM_MK2_BOARD  = addItem(635, "board.quantum_mk2");
+
+        BIOCELLS = addItem(636, "biocells");
+        PLASMID_CELL = addItem(637, "plasmid_cell");
+
+        AMERICIUM_BOULE = addItem(638, "boule.americium");
+        EUROPIUM_BOULE = addItem(639, "boule.europium");
+        GERMANIUM_BOULE = addItem(640, "boule.germanium");
+
+        QPIC_WAFER = addItem(641, "wafer.qpic");
+        NPIC_WAFER = addItem(642, "wafer.npic");
+        UHPIC_WAFER = addItem(643,"wafer.uhpic");
+        XORG_WAFER = addItem(644,"wafer.xorg");
+        AMERICIUM_WAFER = addItem(645,"wafer.americium");
+        EUROPIUM_WAFER = addItem(646,"wafer.europium");
+        GERMANIUM_WAFER = addItem(647,"wafer.germanium");
+        ASOC_SSP_WAFER = addItem(648,"wafer.asoc_ssp");
+        CPU_SSP_WAFER = addItem(649,"wafer.cpu_ssp");
+        ILC_SSP_WAFER = addItem(650,"wafer.ilc_ssp");
+        QBIT_SSP_WAFER = addItem(651,"wafer.qbit_ssp");
+        RAM_SSP_WAFER = addItem(652,"wafer.ram_ssp");
+        SOC_SSP_WAFER = addItem(653,"wafer.soc_ssp");
+
+        NANO_POWER_IC = addItem(654, "plate.nano_power_ic");
+        QUANTUM_POWER_IC = addItem(655, "plate.quantum_power_ic");
+        ASOC_SSP_PLATE = addItem(656,"plate.asoc_ssp");
+        CPU_SSP_PLATE = addItem(657,"plate.cpu_ssp");
+        ILC_SSP_PLATE = addItem(658,"plate.ilc_ssp");
+        QBIT_SSP_PLATE = addItem(659,"plate.qbit_ssp");
+        RAM_SSP_PLATE = addItem(660,"plate.ram_ssp");
+        SOC_SSP_PLATE = addItem(661,"plate.soc_ssp");
+        UHPIC_PLATE = addItem(662,"plate.ultra_high_power_ic");
+        XORG_PLATE = addItem(663,"plate.xor_gate");
+
+
+
+
+
     }
 
     public void registerRecipes() {

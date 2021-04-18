@@ -2292,6 +2292,10 @@ gregtech.machine.air_collector.jei_description=The Air Collector collects air fr
 gregtech.machine.tesla_coil.name=Tesla Coil
 gregtech.machine.tesla_coil.description=Damages all living entities within 7 blocks range/nConsumes 2500 EU for 1 damage point/nInternal buffer Capacity: §e256k EU
 
+#Diode
+gregtech.machine.diode.gui.energyin=%s amps in
+gregtech.machine.diode.gui.energyout=%s amps out
+
 #Fisher
 gregtech.machine.fisher.lv.name=Basic Fisher
 gregtech.machine.fisher.mv.name=Advanced Fisher

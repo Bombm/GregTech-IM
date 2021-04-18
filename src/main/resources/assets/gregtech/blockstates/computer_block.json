@@ -1,0 +1,38 @@
+{
+  "forge_marker": 1,
+  "defaults": {
+    "model": "minecraft:cube_all",
+    "textures": {
+      "all": "gregtech:blocks/rendering_error"
+    }
+  },
+  "variants": {
+    "variant": {
+      "wetware_block": {
+        "textures": {
+          "all": "gregtech:blocks/rendering_error"
+        }
+      },
+      "bioware_block": {
+        "textures": {
+          "all": "gregtech:blocks/rendering_error"
+        }
+      },
+      "micro_block": {
+        "textures": {
+          "all": "gregtech:blocks/rendering_error"
+        }
+      },
+      "high_energy_block": {
+        "textures": {
+          "all": "gregtech:blocks/rendering_error"
+        }
+      },
+      "quantum_mk_2_block": {
+        "textures": {
+          "all": "gregtech:blocks/rendering_error"
+        }
+      }
+    }
+  }
+}

@@ -686,6 +686,19 @@ public class RecipeMaps {
     @ZenProperty
     public static final RecipeMap<AmplifierRecipeBuilder> AMPLIFIERS = new RecipeMap<>("uuamplifier", 1, 1, 0, 0, 0, 0, 1, 1, new AmplifierRecipeBuilder().EUt(32));
 
+    //ssp
+    @ZenProperty
+    public static final RecipeMap<SimpleRecipeBuilder> BIO_LAB = new RecipeMap<>("bio_lab",0,6,0,2,0,3,0,1, new SimpleRecipeBuilder().EUt(12).duration(10)).setSlotOverlay(false, false, GuiTextures.DUST_OVERLAY)
+        .setSlotOverlay(false, false, GuiTextures.VIAL_OVERLAY_2)
+        .setSlotOverlay(false, true, GuiTextures.VIAL_OVERLAY_2)
+        .setSlotOverlay(true, false, GuiTextures.MOLECULAR_OVERLAY_3)
+        .setSlotOverlay(true, true, GuiTextures.MOLECULAR_OVERLAY_3)
+        .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW_MULTIPLE, MoveType.HORIZONTAL);
+
+    @ZenProperty
+    public static final RecipeMap<SimpleRecipeBuilder> GEM_CUTTER = new RecipeMap<>("gem_cutter", 1, 1, 1, 2, 0, 0, 0, 0,  new SimpleRecipeBuilder())
+        .setSlotOverlay(true,false, true,GuiTextures.DUST_OVERLAY)
+        .setProgressBar(GuiTextures.PROGRESS_BAR_SLICE, MoveType.VERTICAL);
 
     @ZenProperty
     public static final FuelRecipeMap DIESEL_GENERATOR_FUELS = new FuelRecipeMap("diesel_generator");

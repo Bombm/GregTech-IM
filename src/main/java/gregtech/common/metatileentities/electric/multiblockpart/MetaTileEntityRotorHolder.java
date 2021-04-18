@@ -4,6 +4,7 @@ import codechicken.lib.raytracer.CuboidRayTraceResult;
 import codechicken.lib.render.CCRenderState;
 import codechicken.lib.render.pipeline.IVertexOperation;
 import codechicken.lib.vec.Matrix4;
+import gregtech.api.GTValues;
 import gregtech.api.damagesources.DamageSources;
 import gregtech.api.gui.GuiTextures;
 import gregtech.api.gui.ModularUI;
@@ -14,7 +15,7 @@ import gregtech.api.metatileentity.multiblock.MultiblockAbility;
 import gregtech.api.render.Textures;
 import gregtech.api.unification.material.type.IngotMaterial;
 import gregtech.common.items.behaviors.TurbineRotorBehavior;
-import gregtech.common.metatileentities.multi.electric.generator.RotorHolderMultiblockController;
+import gregtech.common.metatileentities.multi.electric.generator.MetaTileEntityLargeTurbine;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
@@ -34,7 +35,7 @@ import java.util.List;
 
 public class MetaTileEntityRotorHolder extends MetaTileEntityMultiblockPart implements IMultiblockAbilityPart<MetaTileEntityRotorHolder> {
 
-    private static final int NORMAL_MAXIMUM_SPEED = 6000;
+    private static final int NORMAL_MAXIMUM_SPEED = 59049;
     private static final float DAMAGE_PER_INTERACT = 40.0f;
 
     private InventoryRotorHolder rotorInventory;
@@ -72,22 +73,17 @@ public class MetaTileEntityRotorHolder extends MetaTileEntityMultiblockPart impl
         if (getWorld().isRemote) {
             return;
         }
-        if (getOffsetTimer() % 10 == 0) {
+        if (getTimer() % 10 == 0) {
             this.frontFaceFree = checkTurbineFaceFree();
         }
 
-        RotorHolderMultiblockController controller = (RotorHolderMultiblockController) getController();
+        MetaTileEntityLargeTurbine controller = (MetaTileEntityLargeTurbine) getController();
+        boolean isControllerActive = controller != null && controller.isActive();
 
-        if (!isHasRotor()) {
-            resetRotorSpeed();
-        } else if (controller != null) {
-            boolean isControllerActive = controller.isActive();
-
-            if (isControllerActive && currentRotorSpeed < maxRotorSpeed) {
-                incrementSpeed(controller.getRotorSpeedIncrement());
-            } else if (!isControllerActive && currentRotorSpeed > 0) {
-                incrementSpeed(controller.getRotorSpeedDecrement());
-            }
+        if (currentRotorSpeed < maxRotorSpeed && isControllerActive) {
+            incrementSpeed(getTier()-3);
+        } else if (currentRotorSpeed > 0 && !isControllerActive) {
+            incrementSpeed(2-getTier());
         }
     }
 
@@ -150,11 +146,6 @@ public class MetaTileEntityRotorHolder extends MetaTileEntityMultiblockPart impl
      */
     public boolean isHasRotor() {
         return rotorColor != -1;
-    }
-
-    public void resetRotorSpeed() {
-        currentRotorSpeed = 0;
-        markDirty();
     }
 
     public int getRotorColor() {
@@ -294,7 +285,7 @@ public class MetaTileEntityRotorHolder extends MetaTileEntityMultiblockPart impl
 
     @Override
     public MultiblockAbility<MetaTileEntityRotorHolder> getAbility() {
-        return RotorHolderMultiblockController.ABILITY_ROTOR_HOLDER;
+        return MetaTileEntityLargeTurbine.ABILITY_ROTOR_HOLDER;
     }
 
     @Override

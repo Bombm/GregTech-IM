@@ -70,7 +70,7 @@ public class StoneTypes {
         () -> MetaBlocks.MINERAL.withVariant(MineralVariant.MARBLE, ChiselingVariant.NORMAL),
         state -> state.getBlock() instanceof BlockMineral && ((BlockMineral) state.getBlock()).getVariant(state) == MineralVariant.MARBLE);
 
-    public static StoneType BASALT = new StoneType(13, "basalt", new ResourceLocation(GTValues.MODID, "blocks/stones/basalt/basalt_stone"), SoundType.STONE, OrePrefix.oreBasalt, Materials.Basalt, "pickaxe", 0,
+    public static StoneType BASALT = new StoneType(13, "basalt", new ResourceLocation(GTValues.MODID, "blocks/stones/basalt/basalt_stone"), SoundType.STONE, OrePrefix.ore, Materials.Basalt, "pickaxe", 0,
         () -> MetaBlocks.MINERAL.withVariant(MineralVariant.BASALT, ChiselingVariant.NORMAL),
         state -> state.getBlock() instanceof BlockMineral && ((BlockMineral) state.getBlock()).getVariant(state) == MineralVariant.BASALT);
 }

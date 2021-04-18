@@ -1,11 +1,11 @@
 death.attack.heat=%s был cварен заживо.
 death.attack.frost=%s исследовал криогенику.
-death.attack.electric=%s был шокирован.
+death.attack.electric=%s был шокирован проводами.
 death.attack.radiation=%s теперь светится от радости.
 death.attack.turbine=%s заглянул в турбину.
 death.attack.explosion=%s взорвался.
 death.attack.explosion.player=%s взорвался при помощи %s.
-death.attack.heat.player=%s был сварен живым %s.
+death.attack.heat.player=%s был сварен заживо %s.
 death.attack.crusher=%s был измельчен в фарш.
 
 enchantment.disjunction=Разъединение
@@ -14,7 +14,7 @@ gregtech.top.energy_stored=Энергия:
 gregtech.top.progress=Прогресс:
 gregtech.top.working_disabled=Работа запрещена
 
-gregtech.multiblock.title=Шаблон мультиблочной структуры
+gregtech.multiblock.title=Шаблон мультиблочной машины
 gregtech.multiblock.primitive_blast_furnace.description=Примитивная доменная печь (ПДП) - является многоблочной конструкцией, используемой для варки стали на ранней стадии игры. Хотя она и не очень быстра, она обеспечит вас сталью для ваших первых нужд.
 gregtech.multiblock.coke_oven.description=Коксовая печь - это многоблочная структура, используемая для получения кокосового угля и креозота на ранней стадии игры. Не требует топлива и имеет внутренний бак на 32 ведра креозота. Доступ к инвентарю можно получить через люк коксовой печи.
 gregtech.multiblock.vacuum_freezer.description=Вакуумный морозильник - представляет собой многоблочную конструкцию, в основном используемую для заморозки горячих слитков в обычные слитки. Тем не менее, он также может заморозить другие вещества, к примеру воду.
@@ -1631,6 +1631,10 @@ tile.wire_coil.naquadah.name=Катушка из наквада
 tile.wire_coil.naquadah_alloy.name=Катушка из сплава наквада
 tile.wire_coil.superconductor.name=Сверхпроводящяя катушка
 tile.wire_coil.fusion_coil.name=Катушка термоядерного реактора
+tile.wire.coil.fluxed_electrum.name=Катушка из флюксового электрума
+tile.wire.coil.enderium.name=Эндериумовая катушка
+tile.wire.coil.osmigermanium.name=Катушка из осмистого германия
+tile.wire.coil.stable_island_blend.name=Катушка из сплава острова стабильности
 
 # Блоки предупреждающих знаков
 tile.warning_sign.yellow_stripes.name=Блок желтых полос

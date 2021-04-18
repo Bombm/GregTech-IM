@@ -35,7 +35,13 @@ public class BlockMetalCasing extends VariantBlock<BlockMetalCasing.MetalCasingT
         STAINLESS_CLEAN("stainless_clean"),
         TITANIUM_STABLE("titanium_stable"),
         TUNGSTENSTEEL_ROBUST("tungstensteel_robust"),
-        COKE_BRICKS("coke_bricks");
+        COKE_BRICKS("coke_bricks"),
+        INCONEL_600_SOLID("inconel_600_solid"),
+        INCONEL_X750_SOLID("inconel_x750_solid"),
+        INCONEL_MA758_SOLID("inconel_ma758_solid"),
+        HASTELLOY_N_SOLID("hastelloy_n_solid"),
+        HASTELLOY_K243_SOLID("hastelloy_k243_solid"),
+        HASTELLOY_X78_SOLID("hastelloy_x78_solid");
 
         private final String name;
 

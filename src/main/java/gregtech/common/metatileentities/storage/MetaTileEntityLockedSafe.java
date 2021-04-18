@@ -57,7 +57,7 @@ public class MetaTileEntityLockedSafe extends MetaTileEntity implements IFastRen
     private static IndexedCuboid6 COLLISION_BOX = new IndexedCuboid6(null, new Cuboid6(3 / 16.0, 0 / 16.0, 3 / 16.0, 13 / 16.0, 14 / 16.0, 13 / 16.0));
 
     private int unlockProgress = -1;
-    private int unlockComponentTier = 1;
+    public int unlockComponentTier = 1;
     private boolean isSafeUnlocked = false;
 
     private long unlockComponentsSeed = 0L;

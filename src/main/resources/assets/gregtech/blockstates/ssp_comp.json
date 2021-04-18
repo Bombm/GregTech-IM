@@ -1,0 +1,53 @@
+{
+  "forge_marker": 1,
+  "defaults": {
+    "model": "gregtech:comp",
+    "textures": {
+      "all": "gregtech:blocks/rendering_error"
+    }
+  },
+  "variants": {
+    "variant": {
+      "wetware": {
+        "textures": {
+          "0": "gregtech:blocks/mainframe/line/8",
+          "1": "gregtech:blocks/mainframe/mainframe-texture",
+          "3": "gregtech:blocks/mainframe/line/texture",
+          "particle": "gregtech:blocks/mainframe/mainframe-texture"
+        }
+      },
+      "bioware": {
+        "textures": {
+          "0": "gregtech:blocks/mainframe/line/7",
+          "1": "gregtech:blocks/mainframe/mainframe-texture",
+          "3": "gregtech:blocks/mainframe/line/texture",
+          "particle": "gregtech:blocks/mainframe/mainframe-texture"
+        }
+      },
+      "micro": {
+        "textures": {
+          "0": "gregtech:blocks/mainframe/line/3",
+          "1": "gregtech:blocks/mainframe/mainframe-texture",
+          "3": "gregtech:blocks/mainframe/line/texture",
+          "particle": "gregtech:blocks/mainframe/mainframe-texture"
+        }
+      },
+      "high_energy": {
+        "textures": {
+          "0": "gregtech:blocks/mainframe/line/1",
+          "1": "gregtech:blocks/mainframe/mainframe-texture",
+          "3": "gregtech:blocks/mainframe/line/texture",
+          "particle": "gregtech:blocks/mainframe/mainframe-texture"
+        }
+      },
+      "quantum_mk_2": {
+        "textures": {
+          "0": "gregtech:blocks/mainframe/line/2",
+          "1": "gregtech:blocks/mainframe/mainframe-texture",
+          "3": "gregtech:blocks/mainframe/line/texture",
+          "particle": "gregtech:blocks/mainframe/mainframe-texture"
+        }
+      }
+    }
+  }
+}

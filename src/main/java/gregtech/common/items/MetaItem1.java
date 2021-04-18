@@ -53,6 +53,8 @@ public class MetaItem1 extends MaterialMetaItem {
         purifyMap.put(OrePrefix.dustPure, OrePrefix.dust);
     }
 
+
+
     @Override
     public void registerSubItems() {
         CREDIT_COPPER = addItem(0, "credit.copper");
@@ -184,6 +186,8 @@ public class MetaItem1 extends MaterialMetaItem {
         ELECTRIC_MOTOR_ZPM = addItem(607, "electric.motor.zpm");
         ELECTRIC_MOTOR_UV = addItem(608, "electric.motor.uv");
 
+
+
         ELECTRIC_PUMP_LV = addItem(610, "electric.pump.lv");
         ELECTRIC_PUMP_MV = addItem(611, "electric.pump.mv");
         ELECTRIC_PUMP_HV = addItem(612, "electric.pump.hv");
@@ -192,6 +196,7 @@ public class MetaItem1 extends MaterialMetaItem {
         ELECTRIC_PUMP_LUV = addItem(615, "electric.pump.luv");
         ELECTRIC_PUMP_ZPM = addItem(616, "electric.pump.zpm");
         ELECTRIC_PUMP_UV = addItem(617, "electric.pump.uv");
+
 
         RUBBER_DROP = addItem(627, "rubber_drop").setBurnValue(200);
 
@@ -288,6 +293,96 @@ public class MetaItem1 extends MaterialMetaItem {
         FLUID_CELL = addItem(762, "fluid_cell").addComponents(new FluidStats(1000, Integer.MIN_VALUE, Integer.MAX_VALUE, false));
         INTEGRATED_CIRCUIT = addItem(766, "circuit.integrated").addComponents(new IntCircuitBehaviour());
         FOAM_SPRAYER = addItem(746, "foam_sprayer").addComponents(new FoamSprayerBehavior());
+
+
+        ENERGY_LAPOTRONIC_SSP_ORB_3 = addItem(200, "energy.lapotronicorb3").addComponents(ElectricStats.createRechargeableBattery(1000000000000L, 9)).setModelAmount(8);
+        ENERGY_LAPOTRONIC_SSP_ORB_4 = addItem(201, "energy.lapotronicorb4").addComponents(ElectricStats.createRechargeableBattery(10000000000000L, 10)).setModelAmount(8);
+        ENERGY_LAPOTRONIC_SSP_ORB_5 = addItem(202, "energy.lapotronicorb5").addComponents(ElectricStats.createRechargeableBattery(100000000000000L, 11)).setModelAmount(8);
+        ENERGY_LAPOTRONIC_SSP_ORB_6 = addItem(203, "energy.lapotronicorb6").addComponents(ElectricStats.createRechargeableBattery(1000000000000000L, 12)).setModelAmount(8);
+        ENERGY_LAPOTRONIC_SSP_ORB_7 = addItem(204, "energy.lapotronicorb7").addComponents(ElectricStats.createRechargeableBattery(10000000000000000L, 13)).setModelAmount(8);
+        ENERGY_LAPOTRONIC_SSP_ORB_8 = addItem(205, "energy.lapotronicorb8").addComponents(ElectricStats.createRechargeableBattery(100000000000000000L, 14)).setModelAmount(8);
+
+
+        ELECTRIC_MOTOR_UHV = addItem(209, "electric.motor.uhv");
+        ELECTRIC_MOTOR_UEV = addItem(210, "electric.motor.uev");
+        ELECTRIC_MOTOR_UIV = addItem(211, "electric.motor.uiv");
+        ELECTRIC_MOTOR_UMV = addItem(212, "electric.motor.umv");
+        ELECTRIC_MOTOR_UXV = addItem(214, "electric.motor.uxv");
+        ELECTRIC_MOTOR_OPV = addItem(215, "electric.motor.opv");
+
+        ELECTRIC_PUMP_UHV = addItem(216, "electric.pump.uhv");
+        ELECTRIC_PUMP_UEV = addItem(217, "electric.pump.uev");
+        ELECTRIC_PUMP_UIV = addItem(218, "electric.pump.uiv");
+        ELECTRIC_PUMP_UMV = addItem(219, "electric.pump.umv");
+        ELECTRIC_PUMP_UXV = addItem(220, "electric.pump.uxv");
+        ELECTRIC_PUMP_OPV = addItem(221, "electric.pump.opv");
+
+        ELECTRIC_PISTON_UHV = addItem(222, "electric.piston.uhv");
+        ELECTRIC_PISTON_UEV= addItem(223, "electric.piston.uev");
+        ELECTRIC_PISTON_UIV= addItem(224, "electric.piston.uiv");
+        ELECTRIC_PISTON_UMV= addItem(225, "electric.piston.umv");
+        ELECTRIC_PISTON_UXV= addItem(226, "electric.piston.uxv");
+        ELECTRIC_PISTON_OPV= addItem(227, "electric.piston.opv");
+
+        ROBOT_ARM_UHV = addItem(228, "robot.arm.uhv");
+        ROBOT_ARM_UEV = addItem(229, "robot.arm.uev");
+        ROBOT_ARM_UIV = addItem(230, "robot.arm.uiv");
+        ROBOT_ARM_UMV = addItem(231, "robot.arm.umv");
+        ROBOT_ARM_UXV = addItem(232, "robot.arm.uxv");
+        ROBOT_ARM_OPV = addItem(233, "robot.arm.opv");
+
+        FIELD_GENERATOR_UHV = addItem(234, "field.generator.uhv");
+        FIELD_GENERATOR_UEV = addItem(235, "field.generator.uev");
+        FIELD_GENERATOR_UIV = addItem(236, "field.generator.uiv");
+        FIELD_GENERATOR_UMV = addItem(237, "field.generator.umv");
+        FIELD_GENERATOR_UXV = addItem(238, "field.generator.uxv");
+        FIELD_GENERATOR_OPV = addItem(239, "field.generator.opv");
+
+        EMITTER_UHV = addItem(240, "emitter.uhv");
+        EMITTER_UEV = addItem(241, "emitter.uev");
+        EMITTER_UIV = addItem(242, "emitter.uiv");
+        EMITTER_UMV = addItem(243, "emitter.umv");
+        EMITTER_UXV = addItem(244, "emitter.uxv");
+        EMITTER_OPV = addItem(245, "emitter.opv");
+
+        SENSOR_UHV = addItem(246, "sensor.uhv");
+        SENSOR_UEV = addItem(247, "sensor.uev");
+        SENSOR_UIV = addItem(248, "sensor.uiv");
+        SENSOR_UMV = addItem(249, "sensor.umv");
+        SENSOR_UXV = addItem(250, "sensor.uxv");
+        SENSOR_OPV = addItem(251, "sensor.opv");
+
+        CONVEYOR_MODULE_UHV = addItem(252, "conveyor.module.uhv");
+        CONVEYOR_MODULE_UEV = addItem(253, "conveyor.module.uev");
+        CONVEYOR_MODULE_UIV = addItem(254, "conveyor.module.uiv");
+        CONVEYOR_MODULE_UMV = addItem(255, "conveyor.module.umv");
+        CONVEYOR_MODULE_UXV = addItem(256, "conveyor.module.uxv");
+        CONVEYOR_MODULE_OPV = addItem(257, "conveyor.module.opv");
+
+        BATTERY_HULL_EV = addItem(258, "battery.hull.ev");
+        BATTERY_HULL_IV = addItem(259, "battery.hull.iv");
+        BATTERY_HULL_LUV = addItem(260, "battery.hull.luv");
+        BATTERY_HULL_ZPM = addItem(261, "battery.hull.zpm");
+        BATTERY_HULL_UV = addItem(262, "battery.hull.uv");
+        BATTERY_HULL_UHV = addItem(263, "battery.hull.uhv");
+        BATTERY_HULL_UEV = addItem(264, "battery.hull.uev");
+        BATTERY_HULL_UIV = addItem(265, "battery.hull.uiv");
+        BATTERY_HULL_UMV = addItem(266, "battery.hull.umv");
+        BATTERY_HULL_UXV = addItem(267, "battery.hull.uxv");
+        BATTERY_HULL_OPV = addItem(268, "battery.hull.opv");
+
+        BATTERY_RE_EV = addItem(269, "battery.re.ev.naquadah").addComponents(ElectricStats.createRechargeableBattery(4000000, 4)).setModelAmount(8);
+        BATTERY_RE_IV = addItem(270, "battery.re.iv.naquadah").addComponents(ElectricStats.createRechargeableBattery(16000000, 5)).setModelAmount(8);
+        BATTERY_RE_LUV = addItem(271, "battery.re.luv.naquadah").addComponents(ElectricStats.createRechargeableBattery(64000000, 6)).setModelAmount(8);
+        BATTERY_RE_ZPM = addItem(272, "battery.re.zpm.naquadah").addComponents(ElectricStats.createRechargeableBattery(256000000, 7)).setModelAmount(8);
+        BATTERY_RE_UV = addItem(273, "battery.re.uv.naquadria").addComponents(ElectricStats.createRechargeableBattery(1024000000, 8)).setModelAmount(8);
+        BATTERY_RE_UHV= addItem(274, "battery.re.uhv.naquadria").addComponents(ElectricStats.createRechargeableBattery(4096000000L, 9)).setModelAmount(8);
+        BATTERY_RE_UEV = addItem(275, "battery.re.uev.naquadria").addComponents(ElectricStats.createRechargeableBattery(16384000000L, 10)).setModelAmount(8);
+        BATTERY_RE_UIV = addItem(276, "battery.re.uiv.naquadria").addComponents(ElectricStats.createRechargeableBattery(65536000000L, 11)).setModelAmount(8);
+
+        COMPONENT_SAW_BLADE_MGCUB = addItem(278,"component.gemsaw.mgcarb");
+        COMPONENT_SAW_BLADE_BCUB = addItem(279,"component.gemsaw.bcarb");
+
     }
 
     public void registerRecipes() {
