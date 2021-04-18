@@ -47,6 +47,8 @@ import net.minecraftforge.items.IItemHandlerModifiable;
 import net.minecraftforge.items.ItemHandlerHelper;
 import net.minecraftforge.items.ItemStackHandler;
 
+import static gregtech.api.util.InventoryUtils.simulateItemStackMerge;
+
 import javax.annotation.Nonnull;
 import java.util.ArrayList;
 import java.util.List;
@@ -133,8 +135,11 @@ public class MetaTileEntityPrimitiveBlastFurnace extends MultiblockControllerBas
     }
 
     private boolean setupRecipe(ItemStack inputStack, int fuelAmount, PrimitiveBlastFurnaceRecipe recipe) {
+        List<ItemStack> outputs = new ArrayList<>();
+        outputs.add(recipe.getOutput());
+        outputs.add(getAshForRecipeFuelConsumption(recipe.getFuelAmount()));
         return inputStack.getCount() >= recipe.getInput().getCount() && fuelAmount >= recipe.getFuelAmount() &&
-            ItemHandlerHelper.insertItemStacked(exportItems, recipe.getOutput(), true).isEmpty();
+                simulateItemStackMerge(outputs, exportItems);
     }
 
     private boolean tryPickNewRecipe() {
@@ -339,7 +344,7 @@ public class MetaTileEntityPrimitiveBlastFurnace extends MultiblockControllerBas
         Textures.PRIMITIVE_BLAST_FURNACE_OVERLAY.render(renderState, translation, pipeline, getFrontFacing(), isActive());
         if (isActive() && isStructureFormed()) {
             EnumFacing back = getFrontFacing().getOpposite();
-            Matrix4 offset = translation.copy().translate(back.getFrontOffsetX(), -0.3, back.getFrontOffsetZ());
+            Matrix4 offset = translation.copy().translate(back.getXOffset(), -0.3, back.getZOffset());
             TextureAtlasSprite sprite = TextureUtils.getBlockTexture("lava_still");
             renderState.brightness = 0xF000F0;
             renderState.colour = 0xFFFFFFFF;

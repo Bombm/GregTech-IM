@@ -22,6 +22,9 @@ public class WoodMachineRecipes {
     public static void init() {
         initializeWoodRecipes();
         registerPyrolyseOvenRecipes();
+    }
+
+    public static void postInit() {
         processLogOreDictionary();
     }
 
@@ -91,7 +94,7 @@ public class WoodMachineRecipes {
                 }
             }
             //noinspection ConstantConditions
-            ModHandler.addShapedRecipe(outputRecipe.getRegistryName().getResourcePath() + "_saw",
+            ModHandler.addShapedRecipe(outputRecipe.getRegistryName().getPath() + "_saw",
                 GTUtility.copyAmount(originalOutput, plankStack), "s", "L", 'L', stack);
 
             RecipeMaps.CUTTER_RECIPES.recipeBuilder().inputs(stack)

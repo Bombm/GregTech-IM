@@ -1,5 +1,6 @@
 package gregtech.common.metatileentities.storage;
 
+import codechicken.lib.colour.ColourRGBA;
 import codechicken.lib.raytracer.CuboidRayTraceResult;
 import codechicken.lib.render.CCRenderState;
 import codechicken.lib.render.pipeline.ColourMultiplier;
@@ -20,6 +21,7 @@ import gregtech.api.render.Textures;
 import gregtech.api.unification.material.type.Material.MatFlags;
 import gregtech.api.unification.material.type.SolidMaterial;
 import gregtech.api.util.ByteBufUtils;
+import gregtech.api.util.FluidTooltipUtil;
 import gregtech.api.util.GTUtility;
 import gregtech.api.util.WatchedFluidTank;
 import gregtech.common.ConfigHolder;
@@ -41,6 +43,7 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.BlockPos.MutableBlockPos;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.math.Vec3i;
+import net.minecraft.util.text.TextFormatting;
 import net.minecraft.world.World;
 import net.minecraftforge.common.capabilities.ICapabilityProvider;
 import net.minecraftforge.common.util.Constants.NBT;
@@ -58,6 +61,8 @@ import org.apache.commons.lang3.tuple.Pair;
 import javax.annotation.Nullable;
 import java.lang.ref.WeakReference;
 import java.util.*;
+
+import static gregtech.api.util.GTUtility.convertOpaqueRGBA_CLtoRGB;
 
 public class MetaTileEntityTank extends MetaTileEntity implements IFastRenderMetaTileEntity {
 
@@ -98,7 +103,13 @@ public class MetaTileEntityTank extends MetaTileEntity implements IFastRenderMet
                 MetaTileEntityTank.this.onFluidChangedInternal();
             }
         };
-        initializeInventory();
+        this.fluidInventory = getActualFluidTank();
+    }
+
+    @Override
+    public void onLoad() {
+        super.onLoad();
+        this.recheckBlockedSides();
     }
 
     @Override
@@ -146,6 +157,7 @@ public class MetaTileEntityTank extends MetaTileEntity implements IFastRenderMet
     protected void onCoverPlacementUpdate() {
         super.onCoverPlacementUpdate();
         this.needsCoversUpdate = true;
+        setTankController(null);
     }
 
     @Override
@@ -603,11 +615,12 @@ public class MetaTileEntityTank extends MetaTileEntity implements IFastRenderMet
 
     @SideOnly(Side.CLIENT)
     private int getActualPaintingColor() {
-        int paintingColor = getPaintingColorForRendering();
-        if (paintingColor == DEFAULT_PAINTING_COLOR) {
-            return material.materialRGB;
-        }
-        return paintingColor;
+        int color = ColourRGBA.multiply(
+            GTUtility.convertRGBtoOpaqueRGBA_CL(material.materialRGB),
+            GTUtility.convertRGBtoOpaqueRGBA_CL(getPaintingColorForRendering())
+        );
+        color = convertOpaqueRGBA_CLtoRGB(color);
+        return color;
     }
 
     @Override
@@ -669,6 +682,9 @@ public class MetaTileEntityTank extends MetaTileEntity implements IFastRenderMet
             if (fluidStack != null) {
                 tooltip.add(I18n.format("gregtech.machine.fluid_tank.fluid", fluidStack.amount, fluidStack.getLocalizedName()));
             }
+            String formula = FluidTooltipUtil.getFluidTooltip(fluidStack);
+            if (formula != null)
+                tooltip.add(TextFormatting.GRAY + formula);
         }
     }
 

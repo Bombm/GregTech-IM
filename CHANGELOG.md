@@ -1,5 +1,157 @@
 ## Changelog
 
+### 1.14.0
+* Added Fluid Tooltips (#1519) - dan
+* Added partial overclocking (#1522) - Adrian Brock
+* Added config option for lossless cables to have lossy wires  (#1537) - dan
+* Added Zoom Functionality to Multiblock Previews (#1550) - dan
+* Fixed chests rendering issues (#1531) - ALongStringOfNumbers
+* Fixed NPE when something proxies fluid pipe capabilities (#1552) - Adrian Brock
+* Fixed TileEntities bottom side texture being rotated (#1556) - detav
+
+### 1.13.0
+* Highlight: Chemistry update, Take Two (#1492) - dan
+  * Full info: https://github.com/GregTechCE/GregTech/pull/1492
+* Added ability to set Allowed Input from output side via the machine grid (#1483) - ALongStringOfNumbers
+* Added notConsumable Fluids as possible recipe input (#1514) - dan
+* Updated Plunger to work as always empty fluid container (#1461) - Adrian Brock
+* Updated CycleButtonWidget to cycle in reverse on right click (#1523) - ALongStringOfNumbers
+* Removed NBT from JEI recipe registration (#1516) - dan
+* Removed some duplicated recipes in Macerator (#1542) - dan
+* Fixed Quantum Tank behavior (#1535) - dan
+* Refactored RotorHolder to not be dependent on MetaTileEntityLargeTurbine (#1527) - galyfray
+
+### 1.12.1
+* Updated number formatting (#1467) - Adrian Brock
+* Updated progress bars for some machines (#1504) - dan
+* Updated EU/t price of Rotor recipe in Fluid Solidifier (#1517) - ALongStringOfNumbers
+* Fixed progress bars being 1px off (#1504) - dan
+* Fixed Fuel TOP integration not working for server hosted games (#1511) - Adrian Brock
+* Fixed rare bug with Ore vein generation page biome tooltip (#1518) - ALongStringOfNumbers
+* Fixed Transformer TOP integration not working for server hosted games (#1520) - dan
+
+### 1.12.0
+* Highlight: TOP now displays fuel information (#1484) - Adrian Brock
+  * Blocks consuming fuel now has new information provided in TOP
+  * Specifically what fuel is used and how long will last
+* Highlight: Ore vein generation page in JEI (#1386) - ALongStringOfNumbers
+  * Pressing U on GTCE Ore will show in which veins it can be found
+  * Additional information like dimensions, spawn range and vein weight are available
+  * Vein files now can contain name and description optional values
+* Added descriptors to the machine controller (#1459) - ALongStringOfNumbers
+* Added unlocalized name of supported items is copied to clipboard when using /gt util hand (#1465) - Adrian Brock
+* Added support for multiblocks having own front side overlay (#1494) - dan
+* Added circuit method for adding circuits to CT recipes (#1496) - ALongStringOfNumbers
+* Updated JEI Multiblocks to show block counts and allow bookmarking (#1452) - Adrian Brock
+* Updated surface rocks to allow walking over them (#1462) - Adrian Brock
+* Updated sort to sort items by amount in descending order (#1477) - Nikolay Korolev
+* Updated particle texture to use material color (#1481) - Nikolay Korolev
+* Updated bounding box for Chest and Safe (#1482) - Nikolay Korolev
+* Removed generation of orebyproduct recipes when there are no byproducts (#1463) - Adrian Brock
+* Removed duplicate Dense Plate recipe (#1495) - dan
+* Fixed JEI multiblock rendering issue for Cracking Unit (#1464) - Adrian Brock
+* Fixed setting held item for non player listeners (#1466) - Adrian Brock
+* Fixed findPlayersUsing usage of AxisAlignedBB (#1470) - Nikolay Korolev
+* Fixed chest placement render problem (#1475) - Nikolay Korolev
+* Fixed some Russian translation (#1478) - Nikolay Korolev
+* Fixed empty containers working as full ones in Crafting Station (#1479) - Adrian Brock
+* Refactored MetaTileEntityChest (#1471) - Nikolay Korolev
+
+### 1.11.3 (Hotfix)
+* Removed mechanism to distribute expensive ticks more evenly as it broke JEI multiblock preview - LAGIdiot
+
+### 1.11.2
+* Added mechanism to distribute expensive ticks more evenly (#1424) - dan
+* Fixed Turbine rotor retaining/resetting speed incorrectly (#1422) - dan
+* Fixed CokeOven/PBF controller coloring support (#1432) - dan
+* Fixed NPE when placing covers (#1435) - dan
+* Fixed two tanks being shown in TOP for import hatch (#1447) - dan
+
+### 1.11.1 (Hotfix)
+* Fixed crash when CraftTweaker is not present - LAGIdiot
+
+### 1.11.0
+* Highlight: Chemistry update (#1414) - dan
+  * Unifies conventions of how much of a material is considered 1 mol
+  * Corrects non-stoichiometric reactions, removing the possibility of positive crafting loops
+  * High number of recipes got added/changed/removed
+  * Full info: https://github.com/GregTechCE/GregTech/pull/1414
+* Added better TOP Transformer info (#1404) - dan
+* Added Cable separation recipes (#1405) - dan
+* Added Wire & Cable 4x recipes (#1405) - dan
+* Added Rotor Mold (#1408) - dan
+  * Old Assembler recipe was removed
+* Added "Regular" to dust oredict entries (#1416) - dan
+* Added ability to take Fluids out of Input Hatch (#1427) - dan
+* Updated CT bracket handler to allows getting MetaItems (#1352) - idcppl
+* Updated InputIngredient to implement IIngredient (#1387) - Eutro
+* Removed Tehnut's maven as it is not needed (#1400) - LAGIdiot
+* Removed Duplicate Seed Oil recipes from Fluid Extractor (#1413) - thecodingchicken
+* Removed duplicated extruder recipes for metal rods (#1419) - LAGIdiot
+* Fixed ItemHandlerList::extractItem using slot instead of amount (#1394) - solidDoWant
+* Fixed Tooltip Bounding Box (#1415) - dan
+* Fixed oregen skipping high altitude ores in rare cases (#1418) - ALongStringOfNumbers
+* Fixed Surface Rocks being place underwater (#1420) - Ametsuchi
+* Fixed placed potions missing texture (#1421) - Ametsuchi
+* Fixed crash on registering Fluid with GENERATE_FLUID_BLOCK & GENERATE_PLASMA flags (#1428) - dan
+
+### 1.10.9
+* Updated Fuel recipe map to be similar to recipe map (#1353) - idcppl
+* Updated Furnace recipe map to check all inputs (#1362) - ALongStringOfNumbers
+* Removed Extra Fuel recipe additions (#1388) - ALongStringOfNumbers
+* Fixed incorrect Lapotron Crystal crafting recipe (#1348) - ALongStringOfNumbers
+* Fixed the Primitive Blast Furnace Voiding outputs (#1351) - ALongStringOfNumbers
+* Fixed rare crash on placing cover (#1354) - Eutro
+* Fixed large boiler heatEfficiencyMultiplier not working (#1355) - Artem Melentyev
+* Fixed Forestry like wood not having GTCE recipes (#1369) - detav
+* Fixed Forge data and Capabilities not being synced to client (#1372) - Eutro
+* Fixed surface rocks rendering issue with shaders (#1373) - Hero9909
+* Fixed Multiblocks output voiding (#1384) - Exaxxion
+
+### 1.10.8
+* Added Sifter to Smart Item FIlter options (#1345) - LAGIdiot
+* Fixed shouldCheckWeakPower not working correctly because of Vanilla MC bug (#1331) - solidDoWant
+* Fixed wrong localization key for empty hand (#1327) - Pierre Zhang
+* Fixed wrong translation of Rubber nuget in ZH (#1327) - Pierre Zhang
+* Fixed Multiblocks voiding partial recipe outputs when output bus is mostly full (#1337) - ALongStringOfNumbers
+
+### 1.10.7 (Hotfix)
+* Fixed Brewery and Forming Press recipe finder not working properly - LAGIdiot
+* Fixed Fluid Canner and Electric Furnace recipe finder not working properly (#1326) - ALongStringOfNumbers
+
+### 1.10.6
+* Added Oredicts to granite variants, marble, basalt (#1306) - ALongStringOfNumbers
+* Added Matching Mode to API for possible recipe filtering (#1308) - galyfray
+* Added Smart Matching Mode to Smart Item Filter allowing it ignoring fluids in recipes (#1308) - galyfray
+* Updated Crafting Station to show only extractable items from connected inventories (#1290) - Frederic Marceau
+* Updated zh_cn localization (#1307) - Pierre Zhang
+* Updated Ore Byproduct JEI page to include data for Chemical Bath byproducts (#1310) - ALongStringOfNumbers
+* Fixed a missing command warning for hand (#1307) - Pierre Zhang
+* Fixed Smart Item Filter tooltip on Filter Mode (#1308) - galyfray
+* Fixed Ore Byproduct JEI page showing some unobtainable resources (#1310) - ALongStringOfNumbers
+* Fixed multiblock fluid tank forming on load not respecting blocked sides (#1313) - PrototypeTrousers
+* Fixed multiblock fluid tank incorrectly providing capabilities on load (#1313) - PrototypeTrousers
+* Fixed Ice broken by Saw still creating water block (#1317) - Eutro
+* Fixed drained Fluid Cells not stacking due to NBT (#1319) - ALongStringOfNumbers
+
+### 1.10.5
+* Added LargeStackSizeItemStackHandler to API (#1284) - LAGIdiot
+* Added a JEI Info Tab for the Fluid Canner Machines for Buckets and Fluid Cells (#1288) - Frederic Marceau
+* Added recipe for turning Block of Quartz (Vanilla MC) to 4 Nether Quartz (Vanilla MC) (#1293) - LAGIdiot
+* Updated Granite to be its own material (#1287) - LAGIdiot
+    * Macerating recipe changed
+* Fixed Item Filter not persisting items with size > 127 (#1284) - LAGIdiot
+* Fixed recipe validation logging data from builder chance instead of recipe chance (#1297) - galyfray
+* Fixed Machine Controller GUI allowing to set too high redstone signal (#1299) - galyfray
+* Fixed Machine Controller incorrectly setting working enabled on cover removal (#1299) - galyfray
+* Fixed recipes taking 1 tick less to finish then they should (#1301) - LAGIdiot
+
+### 1.10.4
+* Added placing Pump/Conveyor/Robotic Arm on Output side of machine will turn allow input from output side on (#1266) - PrototypeTrousers
+* Fixed issue preventing battery from fully charged. (#1267) - Derek.CHAN
+* Fixed Crafting Station crash and item dupe (#1274) - PrototypeTrousers
+* Fixed some RU lang entries (#1279) - Bombm
+
 ### 1.10.3
 * Updated (extended) manual I/O mode on covers to be able to bypass filter (#1248) - PrototypeTrousers
 * Fixed JEI R/U hotkeys not working on GTCE Fluid Slots (#1260) - PrototypeTrousers

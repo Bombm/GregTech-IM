@@ -88,7 +88,7 @@ public class CoverConveyor extends CoverBehavior implements CoverWithUI, ITickab
 
     @Override
     public void update() {
-        long timer = coverHolder.getTimer();
+        long timer = coverHolder.getOffsetTimer();
         if (timer % 5 == 0 && isWorkingAllowed && itemsLeftToTransferLastSecond > 0) {
             TileEntity tileEntity = coverHolder.getWorld().getTileEntity(coverHolder.getPos().offset(attachedSide));
             IItemHandler itemHandler = tileEntity == null ? null : tileEntity.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, attachedSide.getOpposite());
@@ -361,7 +361,12 @@ public class CoverConveyor extends CoverBehavior implements CoverWithUI, ITickab
     public boolean canAttach() {
         return coverHolder.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, attachedSide) != null;
     }
-
+    
+    @Override
+    public boolean shouldCoverInteractWithOutputside() {
+        return true;
+    }
+    
     @Override
     public void onRemoved() {
         NonNullList<ItemStack> drops = NonNullList.create();

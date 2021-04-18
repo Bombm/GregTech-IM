@@ -4,6 +4,7 @@ import com.google.common.base.Preconditions;
 import gregtech.api.GTValues;
 import gregtech.api.GregTechAPI;
 import gregtech.api.block.machines.BlockMachine;
+import gregtech.api.cover.CoverBehavior;
 import gregtech.api.gui.IUIHolder;
 import gregtech.api.util.GTControlledRegistry;
 import gregtech.api.util.GTLog;
@@ -110,7 +111,7 @@ public class MetaTileEntityHolder extends TickableTileEntityBase implements IUIH
         //try to lookup by different registry IDs
         if (registeredModIDs == null) {
             registeredModIDs = registry.getKeys().stream()
-                .map(ResourceLocation::getResourceDomain)
+                .map(ResourceLocation::getNamespace)
                 .distinct().collect(Collectors.toList());
             registeredModIDs.remove(GTValues.MODID);
         }
@@ -214,7 +215,7 @@ public class MetaTileEntityHolder extends TickableTileEntityBase implements IUIH
     @Override
     public void onLoad() {
         super.onLoad();
-        if(metaTileEntity != null) {
+        if (metaTileEntity != null) {
             metaTileEntity.onLoad();
         }
     }
@@ -222,7 +223,7 @@ public class MetaTileEntityHolder extends TickableTileEntityBase implements IUIH
     @Override
     public void onChunkUnload() {
         super.onChunkUnload();
-        if(metaTileEntity != null) {
+        if (metaTileEntity != null) {
             metaTileEntity.onUnload();
         }
     }
@@ -248,9 +249,18 @@ public class MetaTileEntityHolder extends TickableTileEntityBase implements IUIH
 
     @Override
     public boolean shouldRenderInPass(int pass) {
-        if(metaTileEntity instanceof IRenderMetaTileEntity) {
+        if (metaTileEntity == null) return false;
+        for (EnumFacing side: EnumFacing.VALUES){
+            CoverBehavior cover = metaTileEntity.getCoverAtSide(side);
+            if (cover instanceof IFastRenderMetaTileEntity && ((IFastRenderMetaTileEntity) cover).shouldRenderInPass(pass)) {
+                return true;
+            } else if(cover instanceof IRenderMetaTileEntity && ((IRenderMetaTileEntity) cover).shouldRenderInPass(pass)) {
+                return true;
+            }
+        }
+        if (metaTileEntity instanceof IRenderMetaTileEntity) {
             return ((IRenderMetaTileEntity) metaTileEntity).shouldRenderInPass(pass);
-        } else if(metaTileEntity instanceof IFastRenderMetaTileEntity) {
+        } else if (metaTileEntity instanceof IFastRenderMetaTileEntity) {
             return ((IFastRenderMetaTileEntity) metaTileEntity).shouldRenderInPass(pass);
         }
         return false;
@@ -258,18 +268,12 @@ public class MetaTileEntityHolder extends TickableTileEntityBase implements IUIH
 
     @Override
     public AxisAlignedBB getRenderBoundingBox() {
-        if(metaTileEntity instanceof IRenderMetaTileEntity) {
+        if (metaTileEntity instanceof IRenderMetaTileEntity) {
             return ((IRenderMetaTileEntity) metaTileEntity).getRenderBoundingBox();
-        } else if(metaTileEntity instanceof IFastRenderMetaTileEntity) {
+        } else if (metaTileEntity instanceof IFastRenderMetaTileEntity) {
             return ((IFastRenderMetaTileEntity) metaTileEntity).getRenderBoundingBox();
         }
-        return new AxisAlignedBB(getPos(), getPos().add(1, 1, 1));
-    }
-
-    @Override
-    public boolean hasFastRenderer() {
-        return metaTileEntity instanceof IFastRenderMetaTileEntity &&
-            !(metaTileEntity instanceof IRenderMetaTileEntity);
+        return new AxisAlignedBB(getPos());
     }
 
     @Override

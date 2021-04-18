@@ -100,7 +100,7 @@ public class CoverPump extends CoverBehavior implements CoverWithUI, ITickable, 
 
     @Override
     public void update() {
-        long timer = coverHolder.getTimer();
+        long timer = coverHolder.getOffsetTimer();
         if (isWorkingAllowed && fluidLeftToTransferLastSecond > 0) {
             this.fluidLeftToTransferLastSecond -= doTransferFluids(fluidLeftToTransferLastSecond);
         }
@@ -177,6 +177,11 @@ public class CoverPump extends CoverBehavior implements CoverWithUI, ITickable, 
     @Override
     public boolean canAttach() {
         return coverHolder.getCapability(CapabilityFluidHandler.FLUID_HANDLER_CAPABILITY, attachedSide) != null;
+    }
+
+    @Override
+    public boolean shouldCoverInteractWithOutputside() {
+        return true;
     }
 
     @Override

@@ -14,7 +14,7 @@ import gregtech.api.metatileentity.multiblock.MultiblockAbility;
 import gregtech.api.render.Textures;
 import gregtech.api.unification.material.type.IngotMaterial;
 import gregtech.common.items.behaviors.TurbineRotorBehavior;
-import gregtech.common.metatileentities.multi.electric.generator.MetaTileEntityLargeTurbine;
+import gregtech.common.metatileentities.multi.electric.generator.RotorHolderMultiblockController;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
@@ -72,17 +72,22 @@ public class MetaTileEntityRotorHolder extends MetaTileEntityMultiblockPart impl
         if (getWorld().isRemote) {
             return;
         }
-        if (getTimer() % 10 == 0) {
+        if (getOffsetTimer() % 10 == 0) {
             this.frontFaceFree = checkTurbineFaceFree();
         }
 
-        MetaTileEntityLargeTurbine controller = (MetaTileEntityLargeTurbine) getController();
-        boolean isControllerActive = controller != null && controller.isActive();
+        RotorHolderMultiblockController controller = (RotorHolderMultiblockController) getController();
 
-        if (currentRotorSpeed < maxRotorSpeed && isControllerActive) {
-            incrementSpeed(1);
-        } else if (currentRotorSpeed > 0 && !isControllerActive) {
-            incrementSpeed(-3);
+        if (!isHasRotor()) {
+            resetRotorSpeed();
+        } else if (controller != null) {
+            boolean isControllerActive = controller.isActive();
+
+            if (isControllerActive && currentRotorSpeed < maxRotorSpeed) {
+                incrementSpeed(controller.getRotorSpeedIncrement());
+            } else if (!isControllerActive && currentRotorSpeed > 0) {
+                incrementSpeed(controller.getRotorSpeedDecrement());
+            }
         }
     }
 
@@ -145,6 +150,11 @@ public class MetaTileEntityRotorHolder extends MetaTileEntityMultiblockPart impl
      */
     public boolean isHasRotor() {
         return rotorColor != -1;
+    }
+
+    public void resetRotorSpeed() {
+        currentRotorSpeed = 0;
+        markDirty();
     }
 
     public int getRotorColor() {
@@ -284,7 +294,7 @@ public class MetaTileEntityRotorHolder extends MetaTileEntityMultiblockPart impl
 
     @Override
     public MultiblockAbility<MetaTileEntityRotorHolder> getAbility() {
-        return MetaTileEntityLargeTurbine.ABILITY_ROTOR_HOLDER;
+        return RotorHolderMultiblockController.ABILITY_ROTOR_HOLDER;
     }
 
     @Override

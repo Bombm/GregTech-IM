@@ -83,7 +83,7 @@ fun minecraft(configure: UserBaseExtension.() -> Unit) = project.configure(confi
 
 minecraft {
     version = mcFullVersion
-    mappings = "snapshot_20170928"
+    mappings = "stable_39"
     runDir = "run"
     isUseDepAts = true
 }
@@ -114,12 +114,12 @@ repositories {
         setUrl("http://maven.covers1624.net")
     }
     maven {
-        name = "tehnut maven"
-        setUrl("http://tehnut.info/maven/")
-    }
-    maven {
         name = "CraftTweaker Maven"
         setUrl("https://maven.blamejared.com/")
+    }
+    maven {
+        name = "CCL Maven New"
+        setUrl("https://minecraft.curseforge.com/api/maven")
     }
 }
 
@@ -128,12 +128,14 @@ dependencies {
         isTransitive = false
     }
     "deobfCompile"("codechicken:ChickenASM:$shortVersion-$chickenasmVersion")
-    "deobfCompile"("codechicken:CodeChickenLib:$mcVersion-$cclVersion:deobf")
-    "deobfCompile"("codechicken:ForgeMultipart:$mcVersion-$multipartVersion:deobf")
+    "deobfCompile"("codechicken-lib-1-8:CodeChickenLib-$mcVersion:$cclVersion:universal")
+    "deobfCompile"("forge-multipart-cbe:ForgeMultipart-$mcVersion:$multipartVersion:universal")
     "deobfCompile"("CraftTweaker2:CraftTweaker2-MC$strippedVersion-Main:$crafttweakerVersion")
     "deobfCompile"("mezz.jei:jei_$mcVersion:$jeiVersion")
     "deobfCompile"("mcjty.theoneprobe:TheOneProbe-$shortVersion:$shortVersion-$topVersion")
     "deobfCompile"("team.chisel.ctm:CTM:MC$mcVersion-$ctmVersion")
+
+    "testImplementation"("junit:junit:4.13.1")
 }
 
 configure<JavaPluginConvention> {
