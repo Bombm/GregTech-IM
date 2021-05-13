@@ -146,9 +146,9 @@ public class GregTechMod {
         DungeonLootLoader.init();
     }
 
-    @Method(modid = GTValues.MODID_FMP)
-    private void registerForgeMultipartCompat() {
-        GTMultipartFactory.INSTANCE.registerFactory();
+    @Method(modid = GTValues.MODID_CT)
+    private void runEarlyCraftTweakerScripts() {
+        CraftTweakerAPI.tweaker.loadScript(false, "gregtech");
     }
 
     @Mod.EventHandler
