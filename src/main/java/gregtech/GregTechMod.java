@@ -46,9 +46,9 @@ import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
 @Mod(modid = GTValues.MODID,
-    name = "GregTech Community Edition",
-    acceptedMinecraftVersions = "[1.12,1.13)",
-    dependencies = "required:forge@[14.23.5.2847,);" + CodeChickenLib.MOD_VERSION_DEP/* + "after:forestry;after:forgemultipartcbe;after:jei@[4.15.0,);after:crafttweaker;"*/)
+        name = "GregTech Community Edition",
+        acceptedMinecraftVersions = "[1.12,1.13)",
+        dependencies = "required:forge@[14.23.5.2847,);" + CodeChickenLib.MOD_VERSION_DEP + "after:forestry;after:jei@[4.15.0,);after:crafttweaker;")
 public class GregTechMod {
 
     static {
@@ -129,11 +129,6 @@ public class GregTechMod {
             }
         }
 
-        if (GTValues.isModLoaded(GTValues.MODID_FMP)) {
-            GTLog.logger.info("ForgeMultiPart found. Legacy block conversion enabled.");
-            registerForgeMultipartCompat();
-        }
-
         if (GTValues.isModLoaded(GTValues.MODID_TOP)) {
             GTLog.logger.info("TheOneProbe found. Enabling integration...");
             TheOneProbeCompatibility.registerCompatibility();
@@ -154,11 +149,6 @@ public class GregTechMod {
     @Method(modid = GTValues.MODID_FMP)
     private void registerForgeMultipartCompat() {
         GTMultipartFactory.INSTANCE.registerFactory();
-    }
-
-    @Method(modid = GTValues.MODID_CT)
-    private void runEarlyCraftTweakerScripts() {
-        CraftTweakerAPI.tweaker.loadScript(false, "gregtech");
     }
 
     @Mod.EventHandler
