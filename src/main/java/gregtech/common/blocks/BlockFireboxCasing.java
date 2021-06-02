@@ -11,7 +11,7 @@ import net.minecraft.util.IStringSerializable;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockAccess;
 
-public class BlockFireboxCasing extends VariantBlock<FireboxCasingType> {
+public class BlockFireboxCasing extends VariantBlockCasing<FireboxCasingType> {
 
     public static final PropertyBool ACTIVE = PropertyBool.create("active");
 

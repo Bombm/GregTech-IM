@@ -261,6 +261,11 @@ public class MetaTileEntityRotorHolder extends MetaTileEntityMultiblockPart impl
             .build(getHolder(), entityPlayer);
     }
 
+    public void resetRotorSpeed() {
+        currentRotorSpeed = 0;
+        markDirty();
+    }
+
     @Override
     public boolean onRightClick(EntityPlayer playerIn, EnumHand hand, EnumFacing facing, CuboidRayTraceResult hitResult) {
         return onRotorHolderInteract(playerIn) ||

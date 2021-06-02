@@ -19,7 +19,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 import javax.annotation.Nullable;
 import java.util.List;
 
-public class BlockWireCoil extends VariantBlock<BlockWireCoil.CoilType> {
+public class BlockWireCoil extends VariantBlockCasing<BlockWireCoil.CoilType> {
 
     public BlockWireCoil() {
         super(net.minecraft.block.material.Material.IRON);
@@ -36,7 +36,7 @@ public class BlockWireCoil extends VariantBlock<BlockWireCoil.CoilType> {
     public void addInformation(ItemStack itemStack, @Nullable World worldIn, List<String> lines, ITooltipFlag tooltipFlag) {
         super.addInformation(itemStack, worldIn, lines, tooltipFlag);
 
-        VariantItemBlock itemBlock = (VariantItemBlock<CoilType, BlockWireCoil>) itemStack.getItem();
+        VariantItemBlockCasing itemBlock = (VariantItemBlockCasing<CoilType, BlockWireCoil>) itemStack.getItem();
         IBlockState stackState = itemBlock.getBlockState(itemStack);
         CoilType coilType = getState(stackState);
 
@@ -63,12 +63,9 @@ public class BlockWireCoil extends VariantBlock<BlockWireCoil.CoilType> {
         NAQUADAH("naquadah", 7200, 16, 1, Materials.Naquadah),
         NAQUADAH_ALLOY("naquadah_alloy", 8600, 16, 2, Materials.NaquadahAlloy),
         SUPERCONDUCTOR("superconductor", 9000, 16, 4, Tier.Superconductor),
-        FUSION_COIL("fusion_coil", 9700, 16, 8, null),
         FLUXED_ELECRTUM("fluxed_electrum",10600,24,12,null),
-        FUSION_COIL_2("fusion_coil_2",11000,24,12,null),
         ENDERIUM("enderium",11600,24,12,null),
         OSMIGERMANIUM("osmigermanium",12200,32,16,null),
-        FUSION_COIL_3("fusion_coil_3",12800,36,18,null),
         STABLE_ISLAND_BLEND("stable_island_blend",17200,128,64,null);
 
         private final String name;

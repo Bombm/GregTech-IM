@@ -56,7 +56,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-public class MetaTileEntityPrimitiveSmelter extends MultiblockControllerBase {
+/*public class MetaTileEntityPrimitiveSmelter extends MultiblockControllerBase {
     private static final List<OrePrefix> FUEL_DISPLAY_PREFIXES = ImmutableList.of(
         OrePrefix.gem, OrePrefix.dust, OrePrefix.block);
 
@@ -407,4 +407,4 @@ public class MetaTileEntityPrimitiveSmelter extends MultiblockControllerBase {
             .bindPlayerInventory(entityPlayer.inventory, GuiTextures.SLOT)
             .build(getHolder(), entityPlayer);
     }
-}
+}*/

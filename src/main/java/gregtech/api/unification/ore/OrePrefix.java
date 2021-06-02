@@ -212,7 +212,6 @@ public enum OrePrefix {
         gem.setIgnored(Materials.Coal);
 
         excludeAllGems(Materials.Charcoal);
-        excludeAllGems(Materials.NetherStar);
         excludeAllGems(Materials.EnderPearl);
         excludeAllGems(Materials.EnderEye);
         excludeAllGems(Materials.Flint);

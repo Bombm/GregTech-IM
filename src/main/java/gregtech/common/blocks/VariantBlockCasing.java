@@ -26,14 +26,14 @@ import javax.annotation.Nullable;
 import java.util.Arrays;
 import java.util.List;
 
-public class VariantBlockSSP<T extends Enum<T> & IStringSerializable> extends BlockHorizontal {
+public class VariantBlockCasing<T extends Enum<T> & IStringSerializable> extends Block {
 
     protected PropertyEnum<T> VARIANT;
     protected T[] VALUES;
 
-    public VariantBlockSSP(Material materialIn) {
+    public VariantBlockCasing(Material materialIn) {
         super(materialIn);
-        setCreativeTab(GregTechAPI.TAB_GREGTECH);
+        setCreativeTab(GregTechAPI.TAB_GREGTECH_CASINGS);
     }
 
     @Override
@@ -44,7 +44,7 @@ public class VariantBlockSSP<T extends Enum<T> & IStringSerializable> extends Bl
     }
 
     public IBlockState getState(T variant) {
-        return getDefaultState().withProperty(VARIANT, variant).withProperty(FACING, EnumFacing.NORTH);
+        return getDefaultState().withProperty(VARIANT, variant);
     }
 
     public T getState(IBlockState blockState) {
@@ -61,33 +61,21 @@ public class VariantBlockSSP<T extends Enum<T> & IStringSerializable> extends Bl
 
     @Override
     protected BlockStateContainer createBlockState() {
-        Class<T> enumClass = GTUtility.getActualTypeParameter(getClass(), VariantBlockSSP.class, 0);
+        Class<T> enumClass = GTUtility.getActualTypeParameter(getClass(), VariantBlockCasing.class, 0);
         this.VARIANT = PropertyEnum.create("variant", enumClass);
         this.VALUES = enumClass.getEnumConstants();
-        return new BlockStateContainer(this,FACING);
+        return new BlockStateContainer(this, VARIANT);
     }
-
-    public IBlockState getStateForPlacement(World worldIn, BlockPos pos, EnumFacing facing, float hitX, float hitY, float hitZ, int meta, EntityLivingBase placer)
-    {
-        return this.getDefaultState().withProperty(FACING, placer.getHorizontalFacing().getOpposite());
-    }
-
-    public IBlockState withRotation(IBlockState state, Rotation rot)
-    {
-        return state.withProperty(FACING, rot.rotate(state.getValue(FACING)));
-    }
-
-
 
     @Override
     @SideOnly(Side.CLIENT)
     public void addInformation(ItemStack stack, @Nullable World player, List<String> tooltip, ITooltipFlag advanced) {
         //tier less tooltip like: tile.turbine_casing.tooltip
-        String unlocalizedVariantTooltip = getUnlocalizedName() + ".tooltip";
+        String unlocalizedVariantTooltip = getTranslationKey() + ".tooltip";
         if (I18n.hasKey(unlocalizedVariantTooltip))
             tooltip.addAll(Arrays.asList(I18n.format(unlocalizedVariantTooltip).split("/n")));
         //item specific tooltip: tile.turbine_casing.bronze_gearbox.tooltip
-        String unlocalizedTooltip = stack.getUnlocalizedName() + ".tooltip";
+        String unlocalizedTooltip = stack.getTranslationKey() + ".tooltip";
         if (I18n.hasKey(unlocalizedTooltip))
             tooltip.addAll(Arrays.asList(I18n.format(unlocalizedTooltip).split("/n")));
     }
@@ -100,12 +88,12 @@ public class VariantBlockSSP<T extends Enum<T> & IStringSerializable> extends Bl
     @Override
     @SuppressWarnings("deprecation")
     public IBlockState getStateFromMeta(int meta) {
-        return getDefaultState().withProperty(FACING, EnumFacing.getHorizontal(meta));
+        return getDefaultState().withProperty(VARIANT, VALUES[meta % VALUES.length]);
     }
 
     @Override
     public int getMetaFromState(IBlockState state) {
-        return state.getValue(FACING).getIndex();
+        return state.getValue(VARIANT).ordinal();
     }
 
 }

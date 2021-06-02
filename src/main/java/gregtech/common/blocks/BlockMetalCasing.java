@@ -8,7 +8,7 @@ import net.minecraft.util.IStringSerializable;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockAccess;
 
-public class BlockMetalCasing extends VariantBlock<BlockMetalCasing.MetalCasingType> {
+public class BlockMetalCasing extends VariantBlockCasing<BlockMetalCasing.MetalCasingType> {
 
     public BlockMetalCasing() {
         super(Material.IRON);

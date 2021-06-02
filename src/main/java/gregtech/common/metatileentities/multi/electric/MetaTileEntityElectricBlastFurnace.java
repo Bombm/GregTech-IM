@@ -30,10 +30,11 @@ public class MetaTileEntityElectricBlastFurnace extends RecipeMapMultiblockContr
     private static final MultiblockAbility<?>[] ALLOWED_ABILITIES = {
         MultiblockAbility.IMPORT_ITEMS, MultiblockAbility.IMPORT_FLUIDS,
         MultiblockAbility.EXPORT_ITEMS, MultiblockAbility.EXPORT_FLUIDS,
-        MultiblockAbility.INPUT_ENERGY
+        MultiblockAbility.INPUT_ENERGY, MultiblockAbility.MAINTENANCE
     };
 
     private int blastFurnaceTemperature;
+    private int currentTemperature;
 
     public MetaTileEntityElectricBlastFurnace(ResourceLocation metaTileEntityId) {
         super(metaTileEntityId, RecipeMaps.BLAST_RECIPES);

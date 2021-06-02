@@ -27,7 +27,7 @@ public class SteamLavaBoiler extends SteamBoiler implements IFuelable {
     private FluidTank lavaFluidTank;
 
     public SteamLavaBoiler(ResourceLocation metaTileEntityId, boolean isHighPressure) {
-        super(metaTileEntityId, isHighPressure, Textures.LAVA_BOILER_OVERLAY, 100);
+        super(metaTileEntityId, isHighPressure, Textures.LAVA_BOILER_OVERLAY, 300);
     }
 
     @Override

@@ -121,7 +121,6 @@ public class Textures {
     public static OrientedOverlayRenderer SIFTER_OVERLAY = new OrientedOverlayRenderer("machines/sifter", FRONT, TOP);
     public static OrientedOverlayRenderer THERMAL_CENTRIFUGE_OVERLAY = new OrientedOverlayRenderer("machines/thermal_centrifuge", FRONT);
     public static OrientedOverlayRenderer WIREMILL_OVERLAY = new OrientedOverlayRenderer("machines/wiremill", FRONT, TOP);
-
     public static OrientedOverlayRenderer BIO_LAB_OVERLAY = new OrientedOverlayRenderer("machines/bio_lab", FRONT, TOP, BACK, SIDE);
     public static OrientedOverlayRenderer GEM_CUTTER_OVERLAY = new OrientedOverlayRenderer("machines/gem_cutter",FRONT,TOP);
 
@@ -163,6 +162,55 @@ public class Textures {
     public static SimpleOverlayRenderer AIR_VENT_OVERLAY = new SimpleOverlayRenderer("overlay/machine/overlay_air_vent");
     public static SimpleOverlayRenderer BLOWER_OVERLAY = new SimpleOverlayRenderer("overlay/machine/overlay_blower");
     public static SimpleOverlayRenderer BLOWER_ACTIVE_OVERLAY = new SimpleOverlayRenderer("overlay/machine/overlay_blower_active");
+
+    public static SimpleOverlayRenderer AUTOMAINTENANCE = new SimpleOverlayRenderer("overlay/machine/overlay_automaintenance_idle");
+    public static SimpleOverlayRenderer AUTOMAINTENANCE_ACTIVE = new SimpleOverlayRenderer("overlay/machine/overlay_automaintenance_active");
+    public static SimpleOverlayRenderer MAINTENANCE = new SimpleOverlayRenderer("overlay/machine/overlay_maintenance");
+    public static SimpleOverlayRenderer MINER_ACTIVE = new SimpleOverlayRenderer("overlay/machine/overlay_miner_active");
+
+    public static SimpleOverlayRenderer ALLOY_SMELTER_OVERLAY_SIMPLE = new SimpleOverlayRenderer("machines/alloy_smelter/front");
+    public static SimpleOverlayRenderer FURNACE_OVERLAY_SIMPLE = new SimpleOverlayRenderer("machines/furnace");
+    public static SimpleOverlayRenderer ELECTRIC_FURNACE_OVERLAY_SIMPLE = new SimpleOverlayRenderer("machines/electric_furnace/front");
+    public static SimpleOverlayRenderer EXTRACTOR_OVERLAY_SIMPLE = new SimpleOverlayRenderer("machines/extractor/front");
+    public static SimpleOverlayRenderer COMPRESSOR_OVERLAY_SIMPLE = new SimpleOverlayRenderer("machines/compressor/front");
+    public static SimpleOverlayRenderer HAMMER_OVERLAY_SIMPLE = new SimpleOverlayRenderer("machines/forge_hammer/front");
+    public static SimpleOverlayRenderer MACERATOR_OVERLAY_SIMPLE = new SimpleOverlayRenderer("machines/macerator/front");
+    public static SimpleOverlayRenderer AMPLIFAB_OVERLAY_SIMPLE = new SimpleOverlayRenderer("machines/amplifab/front");
+    public static SimpleOverlayRenderer ARC_FURNACE_OVERLAY_SIMPLE = new SimpleOverlayRenderer("machines/arc_furnace/front");
+    public static SimpleOverlayRenderer ASSEMBLER_OVERLAY_SIMPLE = new SimpleOverlayRenderer("machines/assembler/front");
+    public static SimpleOverlayRenderer AUTOCLAVE_OVERLAY_SIMPLE = new SimpleOverlayRenderer("machines/autoclave/front");
+    public static SimpleOverlayRenderer BENDER_OVERLAY_SIMPLE = new SimpleOverlayRenderer("machines/bender/front");
+    public static SimpleOverlayRenderer BREWERY_OVERLAY_SIMPLE = new SimpleOverlayRenderer("machines/brewery/front");
+    public static SimpleOverlayRenderer CANNER_OVERLAY_SIMPLE = new SimpleOverlayRenderer("machines/canner/front");
+    public static SimpleOverlayRenderer CENTRIFUGE_OVERLAY_SIMPLE = new SimpleOverlayRenderer("machines/centrifuge/front");
+    public static SimpleOverlayRenderer CHEMICAL_BATH_OVERLAY_SIMPLE = new SimpleOverlayRenderer("machines/chemical_bath/front");
+    public static SimpleOverlayRenderer CHEMICAL_REACTOR_OVERLAY_SIMPLE = new SimpleOverlayRenderer("machines/chemical_reactor/front");
+    public static SimpleOverlayRenderer CUTTER_OVERLAY_SIMPLE = new SimpleOverlayRenderer("machines/cutter/front");
+    public static SimpleOverlayRenderer DISTILLERY_OVERLAY_SIMPLE = new SimpleOverlayRenderer("machines/distillery/front");
+    public static SimpleOverlayRenderer ELECTROLYZER_OVERLAY_SIMPLE = new SimpleOverlayRenderer("machines/electrolyzer/front");
+    public static SimpleOverlayRenderer ELECTROMAGNETIC_SEPARATOR_OVERLAY_SIMPLE = new SimpleOverlayRenderer("machines/electromagnetic_separator/front");
+    public static SimpleOverlayRenderer EXTRUDER_OVERLAY_SIMPLE = new SimpleOverlayRenderer("machines/extruder/front");
+    public static SimpleOverlayRenderer FERMENTER_OVERLAY_SIMPLE = new SimpleOverlayRenderer("machines/fermenter/front");
+    public static SimpleOverlayRenderer FLUID_CANNER_OVERLAY_SIMPLE = new SimpleOverlayRenderer("machines/fluid_canner/front");
+    public static SimpleOverlayRenderer FLUID_EXTRACTOR_OVERLAY_SIMPLE = new SimpleOverlayRenderer("machines/fluid_extractor/front");
+    public static SimpleOverlayRenderer FLUID_HEATER_OVERLAY_SIMPLE = new SimpleOverlayRenderer("machines/fluid_heater/front");
+    public static SimpleOverlayRenderer FLUID_SOLIDIFIER_OVERLAY_SIMPLE = new SimpleOverlayRenderer("machines/fluid_solidifier/front");
+    public static SimpleOverlayRenderer FORGE_HAMMER_OVERLAY_SIMPLE = new SimpleOverlayRenderer("machines/forge_hammer/front");
+    public static SimpleOverlayRenderer FORMING_PRESS_OVERLAY_SIMPLE = new SimpleOverlayRenderer("machines/press/front");
+    public static SimpleOverlayRenderer LATHE_OVERLAY_SIMPLE = new SimpleOverlayRenderer("machines/lathe/front");
+    public static SimpleOverlayRenderer MICROWAVE_OVERLAY_SIMPLE = new SimpleOverlayRenderer("machines/microwave/front");
+    public static SimpleOverlayRenderer MIXER_OVERLAY_SIMPLE = new SimpleOverlayRenderer("machines/mixer/front");
+    public static SimpleOverlayRenderer ORE_WASHER_OVERLAY_SIMPLE = new SimpleOverlayRenderer("machines/ore_washer/front");
+    public static SimpleOverlayRenderer PACKER_OVERLAY_SIMPLE = new SimpleOverlayRenderer("machines/packer/front");
+    public static SimpleOverlayRenderer UNPACKER_OVERLAY_SIMPLE = new SimpleOverlayRenderer("machines/unpacker");
+    public static SimpleOverlayRenderer PLASMA_ARC_FURNACE_OVERLAY_SIMPLE = new SimpleOverlayRenderer("machines/plasma_arc_furnace/front");
+    public static SimpleOverlayRenderer POLARIZER_OVERLAY_SIMPLE = new SimpleOverlayRenderer("machines/polarizer/front");
+    public static SimpleOverlayRenderer LASER_ENGRAVER_OVERLAY_SIMPLE = new SimpleOverlayRenderer("machines/laser_engraver/front");
+    public static SimpleOverlayRenderer SIFTER_OVERLAY_SIMPLE = new SimpleOverlayRenderer("machines/sifter/front");
+    public static SimpleOverlayRenderer THERMAL_CENTRIFUGE_OVERLAY_SIMPLE = new SimpleOverlayRenderer("machines/thermal_centrifuge/front");
+    public static SimpleOverlayRenderer WIREMILL_OVERLAY_SIMPLE = new SimpleOverlayRenderer("machines/wiremill/front");
+    public static SimpleOverlayRenderer BIO_LAB_OVERLAY_SIMPLE = new SimpleOverlayRenderer("machines/bio_lab/front");
+    public static SimpleOverlayRenderer GEM_CUTTER_OVERLAY_SIMPLE = new SimpleOverlayRenderer("machines/gem_cutter/front");
 
     static {
         for (int i = 0; i < VOLTAGE_CASINGS.length; i++) {

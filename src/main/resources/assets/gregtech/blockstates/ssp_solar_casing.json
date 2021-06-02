@@ -5,77 +5,77 @@
   },
   "variants": {
     "variant": {
-      "solar_panel_casing_lv": {
+      "ssp_solar_panel_casing_lv": {
         "textures": {
           "all": "gregtech:blocks/casings/solid/machine_solar_panel_lv"
         }
       },
-      "solar_panel_casing_mv": {
+      "ssp_solar_panel_casing_mv": {
         "textures": {
           "all": "gregtech:blocks/casings/solid/machine_solar_panel_mv"
         }
       },
-      "solar_panel_casing_hv": {
+      "ssp_solar_panel_casing_hv": {
         "textures": {
           "all": "gregtech:blocks/casings/solid/machine_solar_panel_hv"
         }
       },
-      "solar_panel_casing_ev": {
+      "ssp_solar_panel_casing_ev": {
         "textures": {
           "all": "gregtech:blocks/casings/solid/machine_solar_panel_ev"
         }
       },
-      "solar_panel_casing_iv": {
+      "ssp_solar_panel_casing_iv": {
         "textures": {
           "all": "gregtech:blocks/casings/solid/machine_solar_panel_iv"
         }
       },
-      "solar_panel_casing_luv": {
+      "ssp_solar_panel_casing_luv": {
         "textures": {
           "all": "gregtech:blocks/casings/solid/machine_solar_panel_luv"
         }
       },
-      "solar_panel_casing_zpm": {
+      "ssp_solar_panel_casing_zpm": {
         "textures": {
           "all": "gregtech:blocks/casings/solid/machine_solar_panel_zpm"
         }
       },
-      "solar_panel_casing_uv": {
+      "ssp_solar_panel_casing_uv": {
         "textures": {
           "all": "gregtech:blocks/casings/solid/machine_solar_panel_uv"
         }
       },
-      "solar_panel_casing_uhv": {
+      "ssp_solar_panel_casing_uhv": {
         "textures": {
           "all": "gregtech:blocks/casings/solid/machine_solar_panel_uhv"
         }
       },
-      "solar_panel_casing_uev": {
+      "ssp_solar_panel_casing_uev": {
         "textures": {
           "all": "gregtech:blocks/casings/solid/machine_solar_panel_uev"
         }
       },
-      "solar_panel_casing_uiv": {
+      "ssp_solar_panel_casing_uiv": {
         "textures": {
           "all": "gregtech:blocks/casings/solid/machine_solar_panel_uiv"
         }
       },
-      "solar_panel_casing_umv": {
+      "ssp_solar_panel_casing_umv": {
         "textures": {
           "all": "gregtech:blocks/casings/solid/machine_solar_panel_umv"
         }
       },
-      "solar_panel_casing_uxv": {
+      "ssp_solar_panel_casing_uxv": {
         "textures": {
           "all": "gregtech:blocks/casings/solid/machine_solar_panel_uxv"
         }
       },
-      "solar_panel_casing_opv": {
+      "ssp_solar_panel_casing_opv": {
         "textures": {
           "all": "gregtech:blocks/casings/solid/machine_solar_panel_opv"
         }
       },
-      "solar_panel_casing_max": {
+      "ssp_solar_panel_casing_max": {
         "textures": {
           "all": "gregtech:blocks/casings/solid/machine_solar_panel_max"
         }

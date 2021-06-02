@@ -8,7 +8,7 @@ import net.minecraft.util.IStringSerializable;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockAccess;
 
-public class BlockBoilerCasing extends VariantBlock<BlockBoilerCasing.BoilerCasingType> {
+public class BlockBoilerCasing extends VariantBlockCasing<BlockBoilerCasing.BoilerCasingType> {
 
     public BlockBoilerCasing() {
         super(Material.IRON);

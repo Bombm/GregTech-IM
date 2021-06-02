@@ -86,7 +86,7 @@ public class ScannerBehavior implements IItemBehaviour, IItemUseManager {
                 component.getStyle().setColor(TextFormatting.RED);
                 player.sendStatusMessage(component, true);
                 player.stopActiveHand();
-                player.getCooldownTracker().setCooldown(stack.getItem(), 20);
+                player.getCooldownTracker().setCooldown(stack.getItem(), 5);
             }
         }
     }
@@ -114,6 +114,6 @@ public class ScannerBehavior implements IItemBehaviour, IItemUseManager {
 
     @Override
     public int getMaxItemUseDuration(ItemStack stack) {
-        return 200_000;
+        return 20;
     }
 }

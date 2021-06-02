@@ -4,7 +4,7 @@ import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.util.IStringSerializable;
 
-public class BlockWarningSign extends VariantBlock<BlockWarningSign.SignType> {
+public class BlockWarningSign extends VariantBlockCasing<BlockWarningSign.SignType> {
 
     public BlockWarningSign() {
         super(Material.IRON);

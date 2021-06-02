@@ -8,11 +8,11 @@ import net.minecraft.util.IStringSerializable;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockAccess;
 
-public class BlockSSMachineCasing extends VariantBlock<BlockSSMachineCasing.SSMachineCasingType> {
+public class BlockSSMachineCasing extends VariantBlockCasing<BlockSSMachineCasing.SSMachineCasingType> {
 
     public BlockSSMachineCasing() {
         super(Material.IRON);
-        setUnlocalizedName("ss_machine_casing");
+        setTranslationKey("ss_machine_casing");
         setHardness(4.0f);
         setResistance(8.0f);
         setSoundType(SoundType.METAL);

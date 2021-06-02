@@ -1,0 +1,25 @@
+{
+  "forge_marker": 1,
+  "defaults": {
+    "model": "minecraft:cube_all"
+  },
+  "variants": {
+    "variant": {
+      "fusion_coil_mk1": {
+        "textures": {
+          "all": "gregtech:blocks/casings/fusion/machine_casing_fusion_coil"
+        }
+      },
+      "fusion_coil_mk2": {
+        "textures": {
+          "all": "gregtech:blocks/casings/fusion/machine_casing_fusion_coil_3"
+        }
+      },
+      "fusion_coil_mk3": {
+        "textures": {
+          "all": "gregtech:blocks/casings/fusion/machine_casing_fusion_coil_2"
+        }
+      }
+    }
+  }
+}

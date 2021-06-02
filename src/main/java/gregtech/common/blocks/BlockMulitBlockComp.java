@@ -8,12 +8,12 @@ import net.minecraft.util.IStringSerializable;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockAccess;
 
-public class BlockMulitBlockComp extends VariantBlock<BlockMulitBlockComp.MulitBlockCompType> {
+/*public class BlockMulitBlockComp extends VariantBlock<BlockMulitBlockComp.MulitBlockCompType> {
 
 
     public BlockMulitBlockComp() {
         super(Material.IRON);
-        setUnlocalizedName("computer");
+        setTranslationKey("computer");
         setHardness(4.0f);
         setResistance(8.0f);
         setSoundType(SoundType.METAL);
@@ -45,4 +45,4 @@ public class BlockMulitBlockComp extends VariantBlock<BlockMulitBlockComp.MulitB
             return this.name();
         }
     }
-}
+}*/

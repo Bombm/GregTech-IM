@@ -5,11 +5,11 @@ import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.IStringSerializable;
 
-public class VariantItemBlockSSP<R extends Enum<R> & IStringSerializable, T extends VariantBlockSSP<R>> extends ItemBlock {
+public class VariantItemBlockCasing<R extends Enum<R> & IStringSerializable, T extends VariantBlockCasing<R>> extends ItemBlock {
 
     private final T genericBlock;
 
-    public VariantItemBlockSSP(T block) {
+    public VariantItemBlockCasing(T block) {
         super(block);
         this.genericBlock = block;
         setHasSubtypes(true);
@@ -26,8 +26,8 @@ public class VariantItemBlockSSP<R extends Enum<R> & IStringSerializable, T exte
     }
 
     @Override
-    public String getUnlocalizedName(ItemStack stack) {
-        return super.getUnlocalizedName(stack) + '.' + genericBlock.getState(getBlockState(stack)).getName();
+    public String getTranslationKey(ItemStack stack) {
+        return super.getTranslationKey(stack) + '.' + genericBlock.getState(getBlockState(stack)).getName();
     }
 
 }

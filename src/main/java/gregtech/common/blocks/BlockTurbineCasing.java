@@ -8,7 +8,7 @@ import net.minecraft.util.IStringSerializable;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockAccess;
 
-public class BlockTurbineCasing extends VariantBlock<BlockTurbineCasing.TurbineCasingType> {
+public class BlockTurbineCasing extends VariantBlockCasing<BlockTurbineCasing.TurbineCasingType> {
 
     public BlockTurbineCasing() {
         super(Material.IRON);

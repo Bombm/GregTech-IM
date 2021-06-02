@@ -8,7 +8,7 @@ import net.minecraft.util.IStringSerializable;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockAccess;
 
-public class BlockMachineCasing extends VariantBlock<BlockMachineCasing.MachineCasingType> {
+public class BlockMachineCasing extends VariantBlockCasing<BlockMachineCasing.MachineCasingType> {
 
     public BlockMachineCasing() {
         super(Material.IRON);

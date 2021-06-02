@@ -1,6 +1,29 @@
 ## Changelog
 
 ### 1.14.1
+* Merge branch 'master' of https://github.com/Bombm/GregTech-IM - Bombm
+* Merge pull request #3 from GregTechCE/master - Bombm
+* Fix some gradle stuff - Bombm
+* Update GregTechMod.java - Bombm
+* Update GregTechMod.java - Bombm
+* Update GregTechMod.java - Bombm
+* Remove Forge Multipart legacy support (#1594) - LAGIdiot
+* Fix Granite ID Shift (#1549) - dan
+* * Upgrade of old Metablocks to new format - dan
+* Fix git using wrong folder, upgrade git and gradle (#1565) - Adrian Brock
+* Update README.md - Bombm
+* Update question.md - Bombm
+* Update feature_request.md - Bombm
+* Update bug_report.md - Bombm
+* Update pull_request_template.md - Bombm
+* Merge pull request #2 from GregTechCE/master - Bombm
+* Sync with GTCE - Bombm
+* Merge branch 'master' of https://github.com/Bombm/GregTech - Bombm
+* Add casings, materials, etc - Bombm
+* Merge pull request #1 from GregTechCE/master - Bombm
+* Update to newer GTCE version - Bombm
+
+### 1.14.1
 * Added mechanism to distribute expensive ticks more evenly (#1513) - dan
 * Added ore weight tooltips to JEI Ore page (#1562) - ALongStringOfNumbers
 * Added ZenProperty annotation to blastFurnaceTemperature and toolAttackDamage (#1568) - dan

@@ -121,7 +121,7 @@ repositories {
     }
     maven {
         name = "CCL Maven New"
-        setUrl("https://minecraft.curseforge.com/api/maven")
+        setUrl("file:/libs-local/")
     }
 }
 
@@ -245,7 +245,7 @@ tasks.create("generateChangelog") {
 }
 
 val curseforgeProject = configureCurseforgeTask()
-//just because curseforge task is retarded
+//just because curseforge task is r*tarded
 curseforgeProject?.uploadTask?.outputs?.upToDateWhen { false }
 
 fun resolveGitLabDownloadLink(): String? {

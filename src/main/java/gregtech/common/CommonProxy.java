@@ -67,7 +67,6 @@ public class CommonProxy {
         registry.register(METAL_CASING);
         registry.register(SSP_METAL_CASING);
         registry.register(SSP_COMP);
-        registry.register(MBCOMP);
         registry.register(TURBINE_CASING);
         registry.register(SS_MACHINE_CASING);
         registry.register(MACHINE_CASING);
@@ -82,6 +81,8 @@ public class CommonProxy {
         registry.register(SAPLING);
         registry.register(CRUSHER_BLADE);
         registry.register(SURFACE_ROCK_NEW);
+        registry.register(SSP_SOLAR_CASING);
+        registry.register(NON_EBF_COIL);
 
         COMPRESSED.values().stream().distinct().forEach(registry::register);
         SURFACE_ROCKS.values().stream().distinct().forEach(registry::register);
@@ -111,16 +112,16 @@ public class CommonProxy {
         registry.register(createItemBlock(CABLE, ItemBlockCable::new));
         registry.register(createItemBlock(FLUID_PIPE, ItemBlockFluidPipe::new));
 
-        registry.register(createItemBlock(BOILER_CASING, VariantItemBlock::new));
-        registry.register(createItemBlock(BOILER_FIREBOX_CASING, VariantItemBlock::new));
-        registry.register(createItemBlock(METAL_CASING, VariantItemBlock::new));
-        registry.register(createItemBlock(SSP_METAL_CASING, VariantItemBlock::new));
-        registry.register(createItemBlock(TURBINE_CASING, VariantItemBlock::new));
-        registry.register(createItemBlock(SS_MACHINE_CASING, VariantItemBlock::new));
-        registry.register(createItemBlock(MACHINE_CASING, VariantItemBlock::new));
-        registry.register(createItemBlock(MUTLIBLOCK_CASING, VariantItemBlock::new));
-        registry.register(createItemBlock(WIRE_COIL, VariantItemBlock::new));
-        registry.register(createItemBlock(WARNING_SIGN, VariantItemBlock::new));
+        registry.register(createItemBlock(BOILER_CASING, VariantItemBlockCasing::new));
+        registry.register(createItemBlock(BOILER_FIREBOX_CASING, VariantItemBlockCasing::new));
+        registry.register(createItemBlock(METAL_CASING, VariantItemBlockCasing::new));
+        registry.register(createItemBlock(SSP_METAL_CASING, VariantItemBlockCasing::new));
+        registry.register(createItemBlock(TURBINE_CASING, VariantItemBlockCasing::new));
+        registry.register(createItemBlock(SS_MACHINE_CASING, VariantItemBlockCasing::new));
+        registry.register(createItemBlock(MACHINE_CASING, VariantItemBlockCasing::new));
+        registry.register(createItemBlock(MUTLIBLOCK_CASING, VariantItemBlockCasing::new));
+        registry.register(createItemBlock(WIRE_COIL, VariantItemBlockCasing::new));
+        registry.register(createItemBlock(WARNING_SIGN, VariantItemBlockCasing::new));
         registry.register(createItemBlock(GRANITE, StoneItemBlock::new));
         registry.register(createItemBlock(MINERAL, StoneItemBlock::new));
         registry.register(createItemBlock(CONCRETE, StoneItemBlock::new));
@@ -128,9 +129,9 @@ public class CommonProxy {
         registry.register(createMultiTexItemBlock(LEAVES, state -> state.getValue(BlockGregLeaves.VARIANT).getName()));
         registry.register(createMultiTexItemBlock(SAPLING, state -> state.getValue(BlockGregSapling.VARIANT).getName()));
         registry.register(createItemBlock(CRUSHER_BLADE, ItemBlock::new));
-
-        registry.register(createItemBlock(SSP_COMP, VariantItemBlock::new));
-        registry.register(createItemBlock(MBCOMP, VariantItemBlock::new));
+        registry.register(createItemBlock(SSP_SOLAR_CASING, VariantItemBlockCasing::new));
+        registry.register(createItemBlock(SSP_COMP, VariantItemBlockCasing::new));
+        registry.register(createItemBlock(NON_EBF_COIL, VariantItemBlockCasing::new));
 
         COMPRESSED.values()
             .stream().distinct()

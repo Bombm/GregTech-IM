@@ -56,12 +56,12 @@ public class DecompositionRecipeHandler {
         RecipeBuilder builder;
         if (material.hasFlag(Material.MatFlags.DECOMPOSITION_BY_ELECTROLYZING)) {
             builder = RecipeMaps.ELECTROLYZER_RECIPES.recipeBuilder()
-                .duration((int) material.getAverageProtons() * totalInputAmount * 8)
+                .duration((int) material.getAverageProtons() * totalInputAmount * 4)
                 .EUt(getElectrolyzingVoltage(material.materialComponents.stream()
                     .map(s -> s.material).collect(Collectors.toList())));
         } else {
             builder = RecipeMaps.CENTRIFUGE_RECIPES.recipeBuilder()
-                .duration((int) Math.ceil(material.getAverageMass() * totalInputAmount * 1.5))
+                .duration((int) Math.ceil(material.getAverageMass() * totalInputAmount / 1.5))
                 .EUt(30);
         }
         builder.outputs(outputs);
@@ -78,7 +78,10 @@ public class DecompositionRecipeHandler {
         }
 
         //register recipe
-        builder.buildAndRegister();
+        if (outputs.size() <= 6 && !material.hasFlag(DISABLE_DECOMPOSITION)) {
+            builder.buildAndRegister();
+        }
+
     }
 
     //todo think something better with this

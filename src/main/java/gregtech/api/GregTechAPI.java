@@ -10,6 +10,8 @@ import gregtech.api.unification.ore.StoneType;
 import gregtech.api.util.BaseCreativeTab;
 import gregtech.api.util.GTControlledRegistry;
 import gregtech.api.util.IBlockOre;
+import gregtech.common.blocks.BlockMetalCasing;
+import gregtech.common.blocks.MetaBlocks;
 import gregtech.common.items.MetaItems;
 import net.minecraft.util.ResourceLocation;
 
@@ -27,6 +29,8 @@ public class GregTechAPI {
         new BaseCreativeTab(GTValues.MODID + ".materials", () -> OreDictUnifier.get(OrePrefix.ingot, Materials.Aluminium), true);
     public static final BaseCreativeTab TAB_GREGTECH_ORES =
         new BaseCreativeTab(GTValues.MODID + ".ores", () -> MetaItems.JACKHAMMER.getStackForm(), true);
+    public static final BaseCreativeTab TAB_GREGTECH_CASINGS =
+            new BaseCreativeTab(GTValues.MODID + ".casings", () -> MetaBlocks.METAL_CASING.getItemVariant(BlockMetalCasing.MetalCasingType.INVAR_HEATPROOF), true);
 
     public static final GTControlledRegistry<ResourceLocation, MetaTileEntity> META_TILE_ENTITY_REGISTRY = new GTControlledRegistry<>(Short.MAX_VALUE);
 

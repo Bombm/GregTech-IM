@@ -1,6 +1,8 @@
 package gregtech.api.metatileentity.multiblock;
 
 import gregtech.api.capability.IEnergyContainer;
+import gregtech.api.capability.IFuelable;
+import gregtech.api.capability.IMaintainable;
 import net.minecraftforge.fluids.IFluidTank;
 import net.minecraftforge.items.IItemHandlerModifiable;
 
@@ -14,5 +16,7 @@ public class MultiblockAbility<T> {
 
     public static final MultiblockAbility<IEnergyContainer> INPUT_ENERGY = new MultiblockAbility<>();
     public static final MultiblockAbility<IEnergyContainer> OUTPUT_ENERGY = new MultiblockAbility<>();
+
+    public static final MultiblockAbility<IItemHandlerModifiable> MAINTENANCE = new MultiblockAbility<>();
 
 }

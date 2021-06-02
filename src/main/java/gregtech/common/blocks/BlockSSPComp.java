@@ -8,11 +8,11 @@ import net.minecraft.util.IStringSerializable;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockAccess;
 
-public class BlockSSPComp extends VariantBlock<BlockSSPComp.SSPCompBlock> {
+public class BlockSSPComp extends VariantBlockCasing<BlockSSPComp.SSPCompBlock> {
 
     public BlockSSPComp() {
         super(Material.ROCK);
-        setUnlocalizedName("mainframe_block");
+        setTranslationKey("mainframe_block");
         setHardness(3.0f);
         setResistance(3.0f);
         setSoundType(SoundType.METAL);

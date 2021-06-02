@@ -90,17 +90,17 @@ public class ConfigHolder {
     @Config.Comment("Category that contains configs for the NanoSaber")
     public static NanoSaberConfiguration nanoSaberConfiguration = new NanoSaberConfiguration();
 
-    @Config.Comment("Sets the bonus EU output of Steam Turbines. Default: 6144")
+    @Config.Comment("Sets the bonus EU output of Steam Turbines. Default: 100")
     @Config.RequiresMcRestart
-    public static int steamTurbineBonusOutput = 6144;
+    public static int steamTurbineOutputMultiplier = 100;
 
-    @Config.Comment("Sets the bonus EU output of Plasma Turbines. Default: 6144")
+    @Config.Comment("Sets the bonus EU output of Plasma Turbines. Default: 10")
     @Config.RequiresMcRestart
-    public static int plasmaTurbineBonusOutput = 6144;
+    public static int plasmaTurbineOutputMultiplier = 10;
 
-    @Config.Comment("Sets the bonus EU output of Gas Turbines. Default 6144")
+    @Config.Comment("Sets the multiplier for EU output for Large Gas Turbines. Default 20")
     @Config.RequiresMcRestart
-    public static int gasTurbineBonusOutput = 6144;
+    public static int gasTurbineOutputMultiplier = 20;
 
     @Config.Comment("If true, powered zero loss wires will damage the player. Default: false")
     public static boolean doLosslessWiresDamage = false;
@@ -136,6 +136,20 @@ public class ConfigHolder {
     public static class MachineSpecificConfiguration {
         @Config.Comment("Array of blacklisted dimension IDs in which Air Collector does not work.")
         public int[] airCollectorDimensionBlacklist = new int[]{};
+
+        @Config.RangeInt(min = 0, max = 8192)
+        @Config.Comment("Sets the maximum amperage a smart diode can input. Default: 16")
+        @Config.RequiresMcRestart
+        public int maxSmartDiodeInput = 16;
+
+        @Config.RangeInt(min = 0, max = 8192)
+        @Config.Comment("Sets the maximum amperage a smart diode can output. Default: 16")
+        @Config.RequiresMcRestart
+        public int maxSmartDiodeOutput = 16;
+
+        @Config.Comment("Whether the diode should be able to output/input 0 amps or no. Default: true")
+        @Config.RequiresMcRestart
+        public boolean ioZeroAmps = true;
     }
 
     public static class NanoSaberConfiguration {

@@ -513,7 +513,6 @@ public class Materials {
     /**
      *  IM materials
      */
-    //public static FluidMaterial Helium = new FluidMaterial(29, "helium", 0xDDDD00, MaterialIconSet.GAS, of(), STATE_GAS | GENERATE_PLASMA, Element.He);
     public static FluidMaterial Neon = new FluidMaterial(510, "neon", 0xf72d2d, MaterialIconSet.GAS, of(), STATE_GAS | GENERATE_PLASMA, Element.Ne);
     public static FluidMaterial Oganesson_u = new FluidMaterial(618, "u_oganesson", 0x2554b3, MaterialIconSet.GAS, of(), STATE_GAS | GENERATE_PLASMA, Element.Og);
     public static FluidMaterial Oganesson_s = new FluidMaterial(718, "s_oganesson", 0x2554b3, MaterialIconSet.GAS, of(), STATE_GAS | GENERATE_PLASMA, Element.Og);
@@ -553,7 +552,7 @@ public class Materials {
     public static IngotMaterial Meitnerium = new IngotMaterial(609, "meitnerium", 0x4d4608, MaterialIconSet.METALLIC, 5, of(), GENERATE_PLASMA, Element.Mt);
     public static IngotMaterial Roentgenium = new IngotMaterial(611, "roentgenium", 0x25d415, MaterialIconSet.METALLIC, 5, of(), GENERATE_PLASMA, Element.Rg);
     public static IngotMaterial Copernicium = new IngotMaterial(612, "copernicium", 0x80b0e8, MaterialIconSet.METALLIC, 5, of(), GENERATE_PLASMA, Element.Cn);
-    public static IngotMaterial Hihonium = new IngotMaterial(613, "nihonium", 0x567a94, MaterialIconSet.METALLIC, 5, of(), GENERATE_PLASMA | GENERATE_FINE_WIRE, Element.Nh);
+    public static IngotMaterial Nihonium = new IngotMaterial(613, "nihonium", 0x567a94, MaterialIconSet.METALLIC, 5, of(), GENERATE_PLASMA | GENERATE_FINE_WIRE, Element.Nh);
     public static IngotMaterial Flerovium = new IngotMaterial(614, "flerovium", 0x86baab, MaterialIconSet.METALLIC, 5, of(), GENERATE_PLASMA, Element.Fl);
     public static IngotMaterial Moscovium = new IngotMaterial(615, "moscovium", 0x737373, MaterialIconSet.METALLIC, 5, of(), GENERATE_PLASMA, Element.Mc);
     public static IngotMaterial Livermorium = new IngotMaterial(616, "livermorium", 0xb5f7f3, MaterialIconSet.METALLIC, 5, of(), GENERATE_PLASMA, Element.Lv);
@@ -576,11 +575,19 @@ public class Materials {
     public static IngotMaterial Unbipentiumunst = new IngotMaterial(728, "unstable_unbipentium", 0x0d0606, MaterialIconSet.ROUGH, 6, of(), GENERATE_PLATE | SMELT_INTO_FLUID | GENERATE_ROD | GENERATE_GEAR | GENERATE_LONG_ROD | GENERATE_FOIL | GENERATE_BOLT_SCREW | GENERATE_RING | GENERATE_FINE_WIRE | GENERATE_ROTOR | GENERATE_SMALL_GEAR | GENERATE_PLASMA, Element.Ubp);
     public static IngotMaterial Unbihexiumunst = new IngotMaterial(729, "unstable_unbihexium", 0x870000, MaterialIconSet.ROUGH, 6, of(), GENERATE_PLATE | SMELT_INTO_FLUID | GENERATE_ROD | GENERATE_GEAR | GENERATE_LONG_ROD | GENERATE_FOIL | GENERATE_BOLT_SCREW | GENERATE_RING | GENERATE_FINE_WIRE | GENERATE_ROTOR | GENERATE_SMALL_GEAR | GENERATE_PLASMA, Element.Ubh);
     public static IngotMaterial Unbiseptiumunst = new IngotMaterial(730, "unstable_unbiseptium", 0xf00, MaterialIconSet.ROUGH, 6, of(),  GENERATE_PLATE | SMELT_INTO_FLUID | GENERATE_ROD | GENERATE_GEAR | GENERATE_LONG_ROD | GENERATE_FOIL | GENERATE_BOLT_SCREW | GENERATE_RING | GENERATE_FINE_WIRE | GENERATE_ROTOR | GENERATE_SMALL_GEAR | GENERATE_PLASMA, Element.Ubs);
-    public static IngotMaterial Stableisland = new IngotMaterial(731, "island_alloy", 0xfc1717, MaterialIconSet.METALLIC, 64, of(), GENERATE_PLATE | SMELT_INTO_FLUID | GENERATE_ROD | GENERATE_GEAR | GENERATE_LONG_ROD | GENERATE_FOIL | GENERATE_BOLT_SCREW | GENERATE_RING | GENERATE_FINE_WIRE | GENERATE_ROTOR | GENERATE_SMALL_GEAR | GENERATE_FRAME | NO_SMELTING, null, 200.0f, 100.0f, 400000, 16000);
+
+    public static IngotMaterial Stableisland = new IngotMaterial(731, "island_alloy", 0xfc1717, MaterialIconSet.METALLIC, 64, of(new MaterialStack(Ununennium, 1), new MaterialStack(Unbinilium, 1), new MaterialStack(Unbiunium, 1), new MaterialStack(Unbibium, 1), new MaterialStack(Unbitrium, 1), new MaterialStack(Unbiquadium, 1), new MaterialStack(Unbipentium, 1), new MaterialStack(Unbihexium, 1), new MaterialStack(Unbiseptium, 1)), GENERATE_PLATE | SMELT_INTO_FLUID | GENERATE_ROD | GENERATE_GEAR | GENERATE_LONG_ROD | GENERATE_FOIL | GENERATE_BOLT_SCREW | GENERATE_RING | GENERATE_FINE_WIRE | GENERATE_ROTOR | GENERATE_SMALL_GEAR | GENERATE_FRAME | NO_SMELTING, null, 200.0f, 100.0f, 400000, 16000);
+
     public static IngotMaterial Trinium = new IngotMaterial(734, "trinium", 0x284357, MaterialIconSet.METALLIC, 1, of(), GENERATE_PLATE | SMELT_INTO_FLUID | GENERATE_ROD | GENERATE_GEAR | GENERATE_LONG_ROD | GENERATE_FOIL | GENERATE_BOLT_SCREW | GENERATE_RING | GENERATE_FINE_WIRE | GENERATE_ROTOR | GENERATE_SMALL_GEAR | GENERATE_PLASMA, Element.Ke);
 
     public static IngotMaterial Magnesium_carbide = new IngotMaterial(732, "magnesium_carbide", 0x9baab3, MaterialIconSet.CUBEGEM, 4, of(new MaterialStack(Magnesium, 1), new MaterialStack(Carbon,2)),0);
     public static IngotMaterial Boron_carbide = new IngotMaterial(733, "boron_carbide", 0x908188, MaterialIconSet.CUBEGEM, 6, of(new MaterialStack(Boron, 1), new MaterialStack(Carbon,4)),0);
+
+    public static GemMaterial Loparite = new GemMaterial(739, "loparite", 0x456346, MaterialIconSet.GEM_HORIZONTAL, 1, of(new MaterialStack(Sodium, 1), new MaterialStack(Cerium, 1), new MaterialStack(Calcium, 1), new MaterialStack(Strontium, 1), new MaterialStack(Thorium, 1), new MaterialStack(Rutile, 1), new MaterialStack(Niobium, 1), new MaterialStack(Iron, 1), new MaterialStack(Thulium, 1), new MaterialStack(Oxygen, 18)), GENERATE_ORE);
+    public static GemMaterial Euskenite = new GemMaterial(740, "euskenite", 0x7cc27e, MaterialIconSet.GEM_VERTICAL, 1, of(new MaterialStack(Yttrium, 1), new MaterialStack(Cerium, 1), new MaterialStack(Uranium, 1), new MaterialStack(Strontium, 1), new MaterialStack(Thorium, 1), new MaterialStack(Rutile, 2), new MaterialStack(Niobium, 2), new MaterialStack(Thulium, 1), new MaterialStack(Tantalum, 2), new MaterialStack(Oxygen, 13)), GENERATE_ORE);
+
+    public static IngotMaterial HastelloyX78 = new IngotMaterial(743, "hastelloyx", 0x4c4691, MaterialIconSet.METALLIC, 1, of(new MaterialStack(NaquadahAlloy, 10), new MaterialStack(Rhenium, 5), new MaterialStack(Naquadria, 4), new MaterialStack(Gadolinium, 3), new MaterialStack(Strontium, 2), new MaterialStack(Polonium, 3), new MaterialStack(Rutherfordium, 2), new MaterialStack(Fermium, 1)), GENERATE_PLATE | GENERATE_DENSE | SMELT_INTO_FLUID | GENERATE_ROD | GENERATE_GEAR | GENERATE_LONG_ROD | GENERATE_FOIL | GENERATE_BOLT_SCREW | GENERATE_RING | GENERATE_FINE_WIRE | GENERATE_ROTOR | GENERATE_SMALL_GEAR | GENERATE_FRAME, null, 4000);
+
     static {
         for (DustMaterial dustMaterial : new DustMaterial[]{Bastnasite, Monazite}) {
             dustMaterial.separatedOnto = Neodymium;
@@ -898,7 +905,7 @@ public class Materials {
 
         Germanium.setCableProperties(GTValues.V[8], 1, 1024);
         Rutenium.setCableProperties(GTValues.V[7], 1, 256);
-        Hihonium.setCableProperties(GTValues.V[10], 1, 16384);
+        Nihonium.setCableProperties(GTValues.V[10], 1, 16384);
         Stableisland.setCableProperties(GTValues.V[15], 4, 4096);
         Trinium.setCableProperties(GTValues.V[11], 2, 64);
 

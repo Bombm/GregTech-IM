@@ -91,11 +91,11 @@ public class MetaBlocks {
     public static BlockSolarCasing SSP_SOLAR_CASING;
     public static BlockSSMachineCasing SS_MACHINE_CASING;
     public static BlockSSPComp SSP_COMP;
-    public static BlockMulitBlockComp MBCOMP;
     public static BlockMachineCasing MACHINE_CASING;
     public static BlockMultiblockCasing MUTLIBLOCK_CASING;
     public static BlockWireCoil WIRE_COIL;
     public static BlockWarningSign WARNING_SIGN;
+    public static BlockNonEbfCoil NON_EBF_COIL;
 
     public static BlockGranite GRANITE;
     public static BlockMineral MINERAL;
@@ -140,10 +140,11 @@ public class MetaBlocks {
         SSP_METAL_CASING.setRegistryName("ssp_metal_casing");
         SSP_COMP = new BlockSSPComp();
         SSP_COMP.setRegistryName("ssp_comp");
-        MBCOMP = new BlockMulitBlockComp();
-        MBCOMP.setRegistryName("computer_block");
         SSP_SOLAR_CASING = new BlockSolarCasing();
         SSP_SOLAR_CASING.setRegistryName("ssp_solar_casing");
+        NON_EBF_COIL = new BlockNonEbfCoil();
+        NON_EBF_COIL.setRegistryName("non_ebf_coil");
+
 
         MACHINE_CASING = new BlockMachineCasing();
         MACHINE_CASING.setRegistryName("machine_casing");
@@ -324,7 +325,6 @@ public class MetaBlocks {
         registerItemModel(SS_MACHINE_CASING);
         registerItemModel(SSP_METAL_CASING);
         registerItemModel(SSP_COMP);
-        registerItemModel(MBCOMP);
         registerItemModel(MACHINE_CASING);
         registerItemModel(MUTLIBLOCK_CASING);
         registerItemModel(WIRE_COIL);

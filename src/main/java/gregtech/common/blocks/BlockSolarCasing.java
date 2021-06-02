@@ -8,11 +8,11 @@ import net.minecraft.util.IStringSerializable;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockAccess;
 
-public class BlockSolarCasing extends VariantBlock<BlockSolarCasing.SolarCasingType> {
+public class BlockSolarCasing extends VariantBlockCasing<BlockSolarCasing.SolarCasingType> {
 
     public BlockSolarCasing() {
         super(Material.IRON);
-        setUnlocalizedName("ssp_solar_casing");
+        setTranslationKey("ssp_solar_casing");
         setHardness(5.0f);
         setResistance(10.0f);
         setSoundType(SoundType.METAL);
