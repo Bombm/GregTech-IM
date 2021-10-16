@@ -4,6 +4,7 @@ import com.google.common.collect.ImmutableMap;
 import gregtech.api.recipes.Recipe;
 import gregtech.api.recipes.RecipeBuilder;
 import gregtech.api.recipes.RecipeMap;
+import gregtech.api.recipes.recipeproperties.FusionEUToStartProperty;
 import gregtech.api.util.EnumValidationResult;
 import gregtech.api.util.GTLog;
 import gregtech.api.util.ValidationResult;
@@ -11,14 +12,14 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 
 public class FusionRecipeBuilder extends RecipeBuilder<FusionRecipeBuilder> {
 
-    private int EUToStart;
+    private long EUToStart;
 
     public FusionRecipeBuilder() {
     }
 
     public FusionRecipeBuilder(Recipe recipe, RecipeMap<FusionRecipeBuilder> recipeMap) {
         super(recipe, recipeMap);
-        this.EUToStart = recipe.getIntegerProperty("EUToStart");
+        this.EUToStart = recipe.getRecipePropertyStorage().getRecipePropertyValue(FusionEUToStartProperty.getInstance(), 0L);
     }
 
     public FusionRecipeBuilder(RecipeBuilder<FusionRecipeBuilder> recipeBuilder) {
@@ -33,13 +34,13 @@ public class FusionRecipeBuilder extends RecipeBuilder<FusionRecipeBuilder> {
     @Override
     public boolean applyProperty(String key, Object value) {
         if (key.equals("eu_to_start")) {
-            this.EUToStart(((Number) value).intValue());
+            this.EUToStart(((Number) value).longValue());
             return true;
         }
         return false;
     }
 
-    public FusionRecipeBuilder EUToStart(int EUToStart) {
+    public FusionRecipeBuilder EUToStart(long EUToStart) {
         if (EUToStart <= 0) {
             GTLog.logger.error("EU to start cannot be less than or equal to 0", new IllegalArgumentException());
             recipeStatus = EnumValidationResult.INVALID;
@@ -49,17 +50,20 @@ public class FusionRecipeBuilder extends RecipeBuilder<FusionRecipeBuilder> {
     }
 
     public ValidationResult<Recipe> build() {
-        return ValidationResult.newResult(finalizeAndValidate(),
-            new Recipe(inputs, outputs, chancedOutputs, fluidInputs, fluidOutputs,
-                ImmutableMap.of("eu_to_start", EUToStart),
-                duration, EUt, hidden));
+        Recipe recipe = new Recipe(inputs, outputs, chancedOutputs, fluidInputs, fluidOutputs,
+                duration, EUt, hidden);
+        if (!recipe.getRecipePropertyStorage().store(ImmutableMap.of(FusionEUToStartProperty.getInstance(), EUToStart))) {
+            return ValidationResult.newResult(EnumValidationResult.INVALID, recipe);
+        }
+
+        return ValidationResult.newResult(finalizeAndValidate(), recipe);
     }
 
     @Override
     public String toString() {
         return new ToStringBuilder(this)
             .appendSuper(super.toString())
-            .append("EUToStart", EUToStart)
+            .append(FusionEUToStartProperty.getInstance().getKey(), EUToStart)
             .toString();
     }
 }
